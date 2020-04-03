@@ -6,7 +6,7 @@ import Vue from 'vue'
 
 // https://webpack.js.org/guides/dependency-management/#require-context
 const requireComponent = require.context(
-  // Look for files in the current directory
+  // Look for files in the current directoryAA
   '.',
   // Do not look in subdirectories
   false,
