@@ -1,0 +1,29 @@
+/****
+	Ie9 css 분기처리
+****/
+@keyframes "mv_txtView01_1200" {
+	0% {
+		bottom: -10%;
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		bottom: 55%;
+		opacity: 1;
+	}
+}
+@keyframes "mv_txtView01_800" {
+	0% {
+		bottom: -10%;
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		bottom: 30%;
+		opacity: 1;
+	}
+}

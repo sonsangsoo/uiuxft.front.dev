@@ -1,0 +1,28 @@
+/*** MediaQuery ***/
+@media (max-width: 1600px) {
+}
+@media (max-width: 1300px) {
+}
+@media (max-width: 1200px) {
+}
+@media (max-width: 1024px) {
+  .scroll {
+    overflow: auto;
+    > table {
+      width: 967px;
+    }
+  }
+}
+
+@media (max-width: 940px) {
+}
+@media (max-width: 640px) {
+}
+@media (max-width: 480px) {
+}
+@media (max-width: 414px) {
+}
+@media (max-width: 375px) {
+}
+@media (max-width: 320px) {
+}
