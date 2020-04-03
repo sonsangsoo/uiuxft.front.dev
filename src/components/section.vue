@@ -66,7 +66,7 @@ export default {
                   >
                   <!--                                            <input type="text" class="input_ty">-->
                   <select id="" name="" class="sel_ty w100" title="">
-                    <option value="">개AAAAA인</option>
+                    <option value="">개인</option>
                     <option value="">외국개인</option>
                   </select>
                 </div>
