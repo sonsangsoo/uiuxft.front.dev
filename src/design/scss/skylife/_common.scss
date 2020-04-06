@@ -33,6 +33,7 @@ button {
   line-height: 30px;
   vertical-align: middle;
   outline: 0;
+  cursor: pointer;
   img {
     display: none;
   }
@@ -76,8 +77,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url('/assets/images/template/ico_sel_arr.png') no-repeat 90% 50%,
-    #fff;
+  background: url(/assets/images/template/ico_sel_arr.png) no-repeat 90% 50%, #fff;
   border: 1px solid #cccfd4;
   outline: 0;
   letter-spacing: -1px;
@@ -260,7 +260,7 @@ aside {
     overflow: hidden;
     margin: 15px 0;
     border-radius: 50%;
-    background: url('/assets/images/layout/burger.png') no-repeat center center;
+    background: url(/assets/images/layout/burger.png) no-repeat center center;
   }
   > ul {
     > li {
@@ -286,80 +286,80 @@ aside {
     > li.lnb_li01 {
       > a {
         &:before {
-          background: url('/assets/images/template/lnb/ico_lnb01.png') no-repeat
-            center center;
+          background: url(/assets/images/template/lnb/ico_lnb01.png) no-repeat center
+            center;
         }
       }
     }
     > li.lnb_li02 {
       > a {
         &:before {
-          background: url('/assets/images/template/lnb/ico_lnb02.png') no-repeat
-            center center;
+          background: url(/assets/images/template/lnb/ico_lnb02.png) no-repeat center
+            center;
         }
       }
     }
     > li.lnb_li03 {
       > a {
         &:before {
-          background: url('/assets/images/template/lnb/ico_lnb03.png') no-repeat
-            center center;
+          background: url(/assets/images/template/lnb/ico_lnb03.png) no-repeat center
+            center;
         }
       }
     }
     > li.lnb_li04 {
       > a {
         &:before {
-          background: url('/assets/images/template/lnb/ico_lnb04.png') no-repeat
-            center center;
+          background: url(/assets/images/template/lnb/ico_lnb04.png) no-repeat center
+            center;
         }
       }
     }
     > li.lnb_li05 {
       > a {
         &:before {
-          background: url('/assets/images/template/lnb/ico_lnb05.png') no-repeat
-            center center;
+          background: url(/assets/images/template/lnb/ico_lnb05.png) no-repeat center
+            center;
         }
       }
     }
     > li.lnb_li06 {
       > a {
         &:before {
-          background: url('/assets/images/template/lnb/ico_lnb06.png') no-repeat
-            center center;
+          background: url(/assets/images/template/lnb/ico_lnb06.png) no-repeat center
+            center;
         }
       }
     }
     > li.lnb_li07 {
       > a {
         &:before {
-          background: url('/assets/images/template/lnb/ico_lnb07.png') no-repeat
-            center center;
+          background: url(/assets/images/template/lnb/ico_lnb07.png) no-repeat center
+            center;
         }
       }
     }
     > li.lnb_li08 {
       > a {
         &:before {
-          background: url('/assets/images/template/lnb/ico_lnb08.png') no-repeat
-            center center;
+          background: url(/assets/images/template/lnb/ico_lnb08.png) no-repeat center
+            center;
         }
       }
     }
     > li.lnb_li09 {
       > a {
         &:before {
-          background: url('/assets/images/template/lnb/ico_lnb09.png') no-repeat
-            center center;
+          background: url(/assets/images/template/lnb/ico_lnb09.png) no-repeat center
+            center;
         }
       }
     }
     > li.lnb_li10 {
       > a {
         &:before {
-          background: url('/assets/images/template/lnb/ico_lnb10.png') no-repeat
-            center center;
+          background: url(/assets/images/template/lnb/ico_lnb10.png) no-repeat center
+            center;
         }
       }
     }
@@ -391,15 +391,12 @@ header {
   .hd_logo {
     margin-right: 45px;
     display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0;
     > a {
       width: 123px;
       height: 32px;
-      background: url('/assets/images/layout/logo.png') no-repeat center center;
+      background: url(/assets/images/layout/logo.png) no-repeat center center;
       font-size: 0;
       background-size: 100%;
-      vertical-align: middle;
     }
   }
   .hd_search {
@@ -516,8 +513,7 @@ header[data-color='black'] {
   background-color: #08a2bc;
   .hd_logo {
     > a {
-      background: url('/assets/images/layout/logo_ov.png') no-repeat center
-        center;
+      background: url(/assets/images/layout/logo_ov.png) no-repeat center center;
     }
   }
   .hd_search {
@@ -536,8 +532,8 @@ header[data-color='black'] {
       }
     }
     > .search_btn {
-      background: url('/assets/images/template/ico_search_white.png') no-repeat
-        center center;
+      background: url(/assets/images/template/ico_search_white.png) no-repeat center
+        center;
     }
   }
   .hd_utill {
@@ -545,7 +541,7 @@ header[data-color='black'] {
       > li {
         > a.general_btn {
           width: 25px;
-          background: url('/assets/images/template/header/ico_general_black.png')
+          background: url(/assets/images/template/header/ico_general_black.png)
             no-repeat center center;
         }
       }
@@ -587,9 +583,8 @@ header[data-color='green'] {
     .hd_btn {
       > li {
         > a.general_btn {
-          background: url('/assets/images/template/header/ico_general.png')
-            no-repeat center center;
-          height: 30px;
+          background: url(/assets/images/template/header/ico_general.png) no-repeat
+            center center;
         }
       }
     }
@@ -607,7 +602,7 @@ header[data-color='red'] {
       > li {
         > a.general_btn {
           width: 25px;
-          background: url('/assets/images/template/header/ico_general_red.png')
+          background: url(/assets/images/template/header/ico_general_red.png)
             no-repeat center center;
         }
       }
@@ -618,7 +613,6 @@ header[data-color='red'] {
   .hd_btn {
     display: inline-block;
     vertical-align: middle;
-    height: 30px;
     > li {
       display: inline-block;
       margin-right: 20px;
@@ -632,15 +626,13 @@ header[data-color='red'] {
       }
       > a.info_btn {
         width: 25px;
-        background: url('/assets/images/template/header/ico_info.png') no-repeat
-          center center;
-        height: 30px;
+        background: url(/assets/images/template/header/ico_info.png) no-repeat center
+          center;
       }
       > a.favorite_btn {
         width: 25px;
-        background: url('/assets/images/template/header/ico_favorite.png')
-          no-repeat center center;
-        height: 30px;
+        background: url(/assets/images/template/header/ico_favorite.png) no-repeat
+          center center;
       }
       > a.general_btn {
         width: 25px;
@@ -818,15 +810,15 @@ header[data-color='red'] {
           top: 0;
           height: 100%;
           width: 11px;
-          background: url('/assets/images/template/ico_list_arr.png') no-repeat
-            center center;
+          background: url(/assets/images/template/ico_list_arr.png) no-repeat center
+            center;
           transition: all 0.3s linear;
         }
       }
       > a.active {
         &:after {
-          background: url('/assets/images/template/ico_list_arr_ov.png')
-            no-repeat center center;
+          background: url(/assets/images/template/ico_list_arr_ov.png) no-repeat
+            center center;
           transform: rotate(180deg);
         }
       }
