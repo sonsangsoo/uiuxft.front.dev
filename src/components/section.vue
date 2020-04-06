@@ -18,7 +18,7 @@ export default {
     <p class="breadcrumb"
       ><span class="dif_depth">고객관리</span> &gt;
       <span class="dif_depth">통합신청</span> &gt;
-      <span class="now_depth">고객정보 등록</span></p
+      <span class="now_depth">고객정보 등록 </span></p
     >
     <h3 class="main_tit">통합신청</h3>
     <div class="box_wrap">
