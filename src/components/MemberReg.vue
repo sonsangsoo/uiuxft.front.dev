@@ -73,7 +73,7 @@ export default {
               >주민등록번호<span class="c_point">*</span></label
             >
             <div class="half_wrap ty02">
-              <div><input type="text" class="input_ty" /></div>
+              <div><input type="text" class="input_ty"/></div>
               <div><a href="#" class="btn_ty ty01">성명정보조회</a></div>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default {
               >우편번호<span class="c_point">*</span></label
             >
             <div class="half_wrap ty02">
-              <div><input type="text" class="input_ty" /></div>
+              <div><input type="text" class="input_ty"/></div>
               <div><a href="#" class="btn_ty ty01">조회</a></div>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default {
           <div class="content_sec">
             <label for="" class="label_ty">전화번호</label>
             <div class="half_wrap ty02">
-              <div><input type="text" class="input_ty" /></div>
+              <div><input type="text" class="input_ty"/></div>
               <div class="checks">
                 <input id="" type="radio" name="" checked />
                 <label for="" class="pl20">수신</label>
@@ -111,7 +111,7 @@ export default {
               >핸드폰<span class="c_point">*</span></label
             >
             <div class="half_wrap ty02">
-              <div><input type="text" class="input_ty" /></div>
+              <div><input type="text" class="input_ty"/></div>
               <div class="checks">
                 <input id="" type="radio" name="" checked />
                 <label for="" class="pl20">수신</label>
@@ -125,7 +125,7 @@ export default {
               >이메일<span class="c_point">*</span></label
             >
             <div class="email_input half_wrap ty04">
-              <div><input type="text" class="input_ty" /></div>
+              <div><input type="text" class="input_ty"/></div>
               <div>
                 <span class="email_at">@</span>
                 <input type="text" class="input_ty w132p" />
@@ -180,8 +180,9 @@ export default {
             </div>
           </div>
           <div class="btm_btns">
-            <a href="#" class="btn_ty ty02">초기화</a>
-            <a href="#" class="btn_ty ty03">저장</a>
+            <a href="#" class="btn_ty ty02 lg w90p">초기화</a>
+            <a href="#" class="btn_ty ty03 lg w90p">저장</a>
+            <a href="#" class="btn_ty ty01 lg w90p">가입계속</a>
           </div>
         </li>
         <!-- //고객정보 -->
