@@ -1,5 +1,7 @@
 <script>
+import MemSearch from '@components/common/MemSearch.vue'
 export default {
+  components: { MemSearch },
   data() {
     return {}
   },
@@ -8,25 +10,8 @@ export default {
 
 <template>
   <article class="box">
-    <div class="top_cnts">
-      <div class="info_sec">
-        <input
-          type="text"
-          placeholder="고객명/회사명"
-          title="고객명/회사명"
-          class="input_ty cust_name"
-        />
-        <input
-          type="text"
-          placeholder="생년월일/사업자등록번호"
-          title="생년월일/사업자등록번호"
-          class="input_ty cust_date"
-        />
-      </div>
-      <a href="#" class="btn_ty circle01 lookup_btn" title="조회하기">조회</a>
-    </div>
-
     <!-- Tab -->
+    <MemSearch></MemSearch>
     <ul id="info_tab" class="tab ty01">
       <li><a href="#" class="active">고객정보</a></li>
       <li><a href="#">청구계정</a></li>
