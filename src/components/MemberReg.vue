@@ -6,26 +6,17 @@ export default {
   data() {
     return {
       isTabAtive: false,
+      selectedTab: '',
+      tabs: ['고객정보', '청구계정'],
     }
   },
   mounted() {
     console.log(this.$refs)
+    this.selectedTab = this.tabs[0]
   },
   methods: {
-    openTabMenu() {
-      if (this.isTabAtive === false) {
-        this.isTabAtive = true
-        this.$refs.tabFirst.classList.remove('active')
-        this.$refs.tabSecond.classList.add('active')
-        this.$refs.tabFirstContent.classList.remove('active')
-        this.$refs.tabSecondContent.classList.add('active')
-      } else if (this.isTabAtive === true) {
-        this.isTabAtive = false
-        this.$refs.tabSecond.classList.remove('active')
-        this.$refs.tabFirst.classList.add('active')
-        this.$refs.tabSecondContent.classList.remove('active')
-        this.$refs.tabFirstContent.classList.add('active')
-      }
+    openTabMenu(tab) {
+      this.selectedTab = tab
     },
   },
 }
@@ -36,25 +27,20 @@ export default {
     <!-- Tab -->
     <MemSearch></MemSearch>
     <ul id="info_tab" class="tab ty01">
-      <li
-        ><a
-          ref="tabFirst"
+      <li v-for="tab in tabs" :key="tab">
+        <a
+          :class="{ active: tab === selectedTab }"
           href="#"
-          class="active"
-          @click="openTabMenu"
-          >고객정보</a
-        ></li
-      >
-      <li
-        ><a ref="tabSecond" href="#" @click="openTabMenu"
-          >청구계정</a
-        ></li
-      >
+          @click="openTabMenu(tab)"
+        >
+          {{ tab }}
+        </a>
+      </li>
     </ul>
     <div class="box_cnts">
       <ul class="tab_cnt_list">
         <!-- 고객정보 -->
-        <li ref="tabFirstContent" class="active">
+        <li v-if="selectedTab === tabs[0]" class="active">
           <div class="clear mb20"
             ><a href="#" class="btn_ty circle02 fr">정보열람</a></div
           >
@@ -199,7 +185,7 @@ export default {
           </div>
         </li>
         <!-- //고객정보 -->
-        <li ref="tabSecondContent">
+        <li v-if="selectedTab === tabs[1]" class="active">
           청구계정
         </li>
       </ul>
