@@ -32,7 +32,4 @@ export default class {
 
 <style lang="scss">
 /* CSS */
-p {
-  color: #58bc58;
-}
 </style>
