@@ -1,21 +1,31 @@
 <script>
-import { authComputed } from '@state/helpers'
-import ComMemSearch from '@components/common/MemSearch.vue'
-
 export default {
-  components: { ComMemSearch },
   data() {
     return {}
-  },
-  computed: {
-    ...authComputed,
   },
 }
 </script>
 
 <template>
   <article class="box">
-    <ComMemSearch></ComMemSearch>
+    <div class="top_cnts">
+      <div class="info_sec">
+        <input
+          type="text"
+          placeholder="고객명/회사명"
+          title="고객명/회사명"
+          class="input_ty cust_name"
+        />
+        <input
+          type="text"
+          placeholder="생년월일/사업자등록번호"
+          title="생년월일/사업자등록번호"
+          class="input_ty cust_date"
+        />
+      </div>
+      <a href="#" class="btn_ty circle01 lookup_btn" title="조회하기">조회</a>
+    </div>
+
     <!-- Tab -->
     <ul id="info_tab" class="tab ty01">
       <li><a href="#" class="active">고객정보</a></li>

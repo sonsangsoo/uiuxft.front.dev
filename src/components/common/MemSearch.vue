@@ -1,5 +1,9 @@
 <!-- 고객정보 조회 공통 컴포넌트 -->
-<template name="component-name">
+<script>
+export default {}
+</script>
+
+<template>
   <div class="top_cnts">
     <div class="info_sec">
       <input
@@ -21,13 +25,7 @@
 
 <script>
 // JS
-export default class {
-  install() {
-    this.data = {
-      title: 'omi',
-    }
-  }
-}
+export default class {}
 </script>
 
 <style lang="scss">
