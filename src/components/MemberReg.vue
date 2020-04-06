@@ -1,9 +1,32 @@
-<script>
+F<script>
 import MemSearch from '@components/common/MemSearch.vue'
+
 export default {
   components: { MemSearch },
   data() {
-    return {}
+    return {
+      isTabAtive: false,
+    }
+  },
+  mounted() {
+    console.log(this.$refs)
+  },
+  methods: {
+    openTabMenu() {
+      if (this.isTabAtive === false) {
+        this.isTabAtive = true
+        this.$refs.tabFirst.classList.remove('active')
+        this.$refs.tabSecond.classList.add('active')
+        this.$refs.tabFirstContent.classList.remove('active')
+        this.$refs.tabSecondContent.classList.add('active')
+      } else if (this.isTabAtive === true) {
+        this.isTabAtive = false
+        this.$refs.tabSecond.classList.remove('active')
+        this.$refs.tabFirst.classList.add('active')
+        this.$refs.tabSecondContent.classList.remove('active')
+        this.$refs.tabFirstContent.classList.add('active')
+      }
+    },
   },
 }
 </script>
@@ -13,13 +36,25 @@ export default {
     <!-- Tab -->
     <MemSearch></MemSearch>
     <ul id="info_tab" class="tab ty01">
-      <li><a href="#" class="active">고객정보</a></li>
-      <li><a href="#">청구계정</a></li>
+      <li
+        ><a
+          ref="tabFirst"
+          href="#"
+          class="active"
+          @click="openTabMenu"
+          >고객정보</a
+        ></li
+      >
+      <li
+        ><a ref="tabSecond" href="#" @click="openTabMenu"
+          >청구계정</a
+        ></li
+      >
     </ul>
     <div class="box_cnts">
       <ul class="tab_cnt_list">
         <!-- 고객정보 -->
-        <li class="active">
+        <li ref="tabFirstContent" class="active">
           <div class="clear mb20"
             ><a href="#" class="btn_ty circle02 fr">정보열람</a></div
           >
@@ -47,12 +82,12 @@ export default {
               <input type="text" class="input_ty" />
             </div>
           </div>
-          <div class="content_sec ">
+          <div class="content_sec">
             <label for="" class="label_ty"
               >주민등록번호<span class="c_point">*</span></label
             >
             <div class="half_wrap ty02">
-              <div><input type="text" class="input_ty"/></div>
+              <div><input type="text" class="input_ty" /></div>
               <div><a href="#" class="btn_ty ty01">성명정보조회</a></div>
             </div>
           </div>
@@ -61,7 +96,7 @@ export default {
               >우편번호<span class="c_point">*</span></label
             >
             <div class="half_wrap ty02">
-              <div><input type="text" class="input_ty"/></div>
+              <div><input type="text" class="input_ty" /></div>
               <div><a href="#" class="btn_ty ty01">조회</a></div>
             </div>
           </div>
@@ -76,7 +111,7 @@ export default {
           <div class="content_sec">
             <label for="" class="label_ty">전화번호</label>
             <div class="half_wrap ty02">
-              <div><input type="text" class="input_ty"/></div>
+              <div><input type="text" class="input_ty" /></div>
               <div class="checks">
                 <input id="" type="radio" name="" checked />
                 <label for="" class="pl20">수신</label>
@@ -90,7 +125,7 @@ export default {
               >핸드폰<span class="c_point">*</span></label
             >
             <div class="half_wrap ty02">
-              <div><input type="text" class="input_ty"/></div>
+              <div><input type="text" class="input_ty" /></div>
               <div class="checks">
                 <input id="" type="radio" name="" checked />
                 <label for="" class="pl20">수신</label>
@@ -104,7 +139,7 @@ export default {
               >이메일<span class="c_point">*</span></label
             >
             <div class="email_input half_wrap ty04">
-              <div><input type="text" class="input_ty"/></div>
+              <div><input type="text" class="input_ty" /></div>
               <div>
                 <span class="email_at">@</span>
                 <input type="text" class="input_ty w132p" />
@@ -164,7 +199,9 @@ export default {
           </div>
         </li>
         <!-- //고객정보 -->
-        <li> </li>
+        <li ref="tabSecondContent">
+          청구계정
+        </li>
       </ul>
     </div>
   </article>

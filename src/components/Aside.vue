@@ -34,7 +34,7 @@ export default {
     // }
   },
   methods: {
-    opnMenu() {
+    openMenu() {
       if (this.isActive === false) {
         this.isActive = true
         this.$refs.dep2_bg.style.display = 'block'
@@ -48,8 +48,7 @@ export default {
         this.$refs.dep3.style.display = 'none'
       }
     },
-    opnDepThreeMenu() {
-      console.log('opnDepThreeMenu')
+    openDepThreeMenu() {
       if (this.isDepThreeActive === false) {
         this.isDepThreeActive = true
         this.$refs.dep3.style.display = 'block'
@@ -74,7 +73,7 @@ export default {
             href="#"
             title="고객관리"
             :class="{ active: isActive }"
-            v-on:click="opnMenu"
+            @click="openMenu"
             >고객관리</a
           >
           <div ref="dep2" class="dep2">
@@ -87,7 +86,7 @@ export default {
                 <a
                   href="#"
                   :class="{ active: isDepThreeActive }"
-                  v-on:click="opnDepThreeMenu"
+                  @click="openDepThreeMenu"
                 >
                   가전결합상품
                 </a>
