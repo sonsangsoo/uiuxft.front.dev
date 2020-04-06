@@ -1,7 +1,19 @@
 <script>
 export default {
+  data() {
+    return {
+      isTabAtive: true,
+      selectedTab: '',
+      tabs: ['현황', 'TV', '인터넷', '홈렌탈', '···'],
+    }
+  },
+  mounted() {
+    this.selectedTab = this.tabs[0]
+  },
   methods: {
-    activeTab: function(tab, obj) {},
+    openTab(tab) {
+      this.selectedTab = tab
+    },
   },
 }
 </script>
@@ -10,17 +22,21 @@ export default {
   <article class="box">
     <!-- Tab -->
     <ul id="status_tab" class="tab ty01 row06">
-      <li><a href="#" class="active">현황</a></li>
-      <li><a href="#">TV</a></li>
-      <li><a href="#">인터넷</a></li>
-      <li><a href="#">홈렌탈</a></li>
-      <li class="tab_more"><a href="#">···</a></li>
+
+      <li v-for="tab in tabs" :key="tab" >
+        <a
+          :class="{ active: tab === selectedTab }"
+          href="#"
+          @click="openTab(tab)"
+          >{{ tab }}</a
+        >
+      </li>
     </ul>
     <!-- 컨텐츠 -->
     <div class="box_cnts">
       <ul class="tab_cnt_list">
         <!-- 현황 -->
-        <li class="active">
+        <li v-if="selectedTab === tabs[0]" class="active">
           <!-- 상품목록 -->
           <div class="content_sec mb30">
             <div class="clear mb10">
@@ -265,7 +281,7 @@ export default {
                     >주민등록 번호<span class="c_point">*</span></label
                   >
                   <div class="half_wrap ty03">
-                    <div><input type="text" class="input_ty"/></div>
+                    <div><input type="text" class="input_ty" /></div>
                     <div><a href="#" class="btn_ty ty01">성명정보조회</a></div>
                   </div>
                 </div>
@@ -351,10 +367,9 @@ export default {
           <!-- 결합 예상 금액 -->
           <div class="content_sec ty02 mb0">
             <span class="sub_tit d_inBlock">결합예상금액</span>
-            <span class="ml20 c_point" style="vertical-align: 3px"
-              >* 요금은 요금감면 및 기타 할인 적용되지 않은 예상
-              금액입니다.</span
-            >
+            <span class="ml20 c_point" style="vertical-align: 3px;">
+              * 요금은 요금감면 및 기타 할인 적용되지 않은 예상 금액입니다.
+            </span>
             <div class="half_wrap ty03">
               <div class="half_wrap">
                 <div>
@@ -387,6 +402,26 @@ export default {
           <div class="btm_btns">
             <a href="#" class="btn_ty ty02">초기화</a>
             <a href="#" class="btn_ty ty03">저장</a>
+          </div>
+        </li>
+        <li v-if="selectedTab === tabs[1]" class="active">
+          <div class="content_sec mb30">
+            TV
+          </div>
+        </li>
+        <li v-if="selectedTab === tabs[2]" class="active">
+          <div class="content_sec mb30">
+            INTERNET
+          </div>
+        </li>
+        <li v-if="selectedTab === tabs[3]" class="active">
+          <div class="content_sec mb30">
+            HOME RENTAL
+          </div>
+        </li>
+        <li v-if="selectedTab === tabs[4]" class="active">
+          <div class="content_sec mb30">
+            ...
           </div>
         </li>
       </ul>
