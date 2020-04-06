@@ -19,9 +19,6 @@ export default {
 </script>
 
 <template>
-  <div id="wrap" data-color="green">
-    <div class="dep2_bg"></div>
-    <!-- 등록상품 탭 컨트롤(탭클릭시 각탭의 vue화면을 불러와 div class="box_cnts" 안에 보여준다.-->
     <article class="box">
       <!-- Tab -->
       <ul id="status_tab" class="tab ty01 row06">
@@ -31,7 +28,10 @@ export default {
         <li><a href="#" @click="activeTab('homerental')">홈렌탈</a></li>
         <li class="tab_more"><a href="#">···</a></li>
       </ul>
-      <div class="box_cnts"> </div>
+      <div class="box_cnts">
+        <!--<router-view></router-view> -->
+      </div>
+
     </article>
   </div>
 </template>
