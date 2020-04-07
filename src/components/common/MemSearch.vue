@@ -35,13 +35,11 @@ export default {
   <div class="top_cnts">
     <div class="info_sec">
       <input
-        v-model="searchName"
         placeholder="고객명/회사명"
         title="고객명/회사명"
         class="input_ty cust_name"
       />
       <input
-        v-model="searchNumber"
         placeholder="생년월일/사업자등록번호"
         title="생년월일/사업자등록번호"
         class="input_ty cust_date"

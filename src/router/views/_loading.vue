@@ -1,12 +1,13 @@
 <script>
 import Layout from '@layouts/main.vue'
+import BaseIcon from './_base-icon.vue'
 
 export default {
   page: {
     title: 'Loading page...',
     meta: [{ name: 'description', content: 'Loading page...' }],
   },
-  components: { Layout },
+  components: { Layout, BaseIcon },
 }
 </script>
 
@@ -22,7 +23,7 @@ export default {
 @import '@design';
 
 .loadingIcon {
-/*   @extend %typography-xxlarge;
+  /*   @extend %typography-xxlarge;
  */
   display: block;
   margin: 0 auto;
