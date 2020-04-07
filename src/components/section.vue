@@ -1,7 +1,7 @@
 <script>
 import { authComputed } from '@state/helpers'
 import MemberReg from '@components/MemberReg.vue'
-import ProductReg from '@components/ProductReg.vue'
+import ProductReg from '@views/ProductReg.vue'
 
 export default {
   components: { MemberReg, ProductReg },

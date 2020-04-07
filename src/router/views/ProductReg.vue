@@ -1,5 +1,9 @@
 <script>
+import TvSection from '@views/tv/Tv.vue'
+import AppBasicInfo from '@views/common/AppBasicInfo.vue'
+
 export default {
+  components: { TvSection, AppBasicInfo },
   data() {
     return {
       isTabAtive: true,
@@ -22,8 +26,7 @@ export default {
   <article class="box">
     <!-- Tab -->
     <ul id="status_tab" class="tab ty01 row06">
-
-      <li v-for="tab in tabs" :key="tab" >
+      <li v-for="tab in tabs" :key="tab">
         <a
           :class="{ active: tab === selectedTab }"
           href="#"
@@ -246,122 +249,7 @@ export default {
           <!-- //가입유치정보 -->
 
           <!-- 신청자 기본정보 -->
-          <div class="content_sec ty02 line_div">
-            <span class="sub_tit">신청자 기본정보</span>
-            <div class="d_inBlock checks ml20">
-              <input id="" type="checkbox" name="" />
-              <label for="" class="c_point">TV 정보와 동일</label>
-              <input id="" type="checkbox" name="" />
-              <label for="" class="c_point">인터넷 정보와 동일</label>
-            </div>
-            <div class="half_wrap">
-              <div class="half_wrap">
-                <div>
-                  <label for="" class="label_ty"
-                    >신청자 구분<span class="c_point">*</span></label
-                  >
-                  <input type="text" class="input_ty" />
-                </div>
-                <div>
-                  <label for="" class="label_ty"
-                    >신청자명<span class="c_point">*</span></label
-                  >
-                  <input type="text" class="input_ty" />
-                </div>
-              </div>
-              <div class="half_wrap">
-                <div>
-                  <label for="" class="label_ty"
-                    >신청자 전화번호<span class="c_point">*</span></label
-                  >
-                  <input type="text" class="input_ty" />
-                </div>
-                <div>
-                  <label for="" class="label_ty"
-                    >주민등록 번호<span class="c_point">*</span></label
-                  >
-                  <div class="half_wrap ty03">
-                    <div><input type="text" class="input_ty" /></div>
-                    <div><a href="#" class="btn_ty ty01">성명정보조회</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mt15">
-              <p class="fs_13 c_gray lh1 mb7"
-                >가입대상<span class="c_point">*</span></p
-              >
-              <div class="half_wrap">
-                <div class="box_gray">
-                  <div class="checks d_block tl">
-                    <input id="" type="checkbox" name="" />
-                    <label for="" class="fs_15 lh20"
-                      ><span class="c_point">*</span> 고유식별정보 수집/이용
-                      동의</label
-                    >
-                  </div>
-                  <div class="checks d_block tl">
-                    <input id="" type="checkbox" name="" />
-                    <label for="" class="fs_15 lh20"
-                      ><span class="c_point">*</span> 개인정보 수집/이용
-                      동의</label
-                    >
-                  </div>
-                </div>
-                <div class="box_gray">
-                  <div class="checks d_block tl">
-                    <input id="" type="checkbox" name="" />
-                    <label for="" class="fs_15 lh20"
-                      >고객 혜택 제공을 위한 수신 동의</label
-                    >
-                  </div>
-                  <div class="checks d_block tl">
-                    <input id="" type="checkbox" name="" />
-                    <label for="" class="fs_15 lh20"
-                      >개인정보 제 3자 제공 동의</label
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mt15">
-              <p class="fs_13 c_gray lh1 mb7"
-                >신청자<span class="c_point">*</span></p
-              >
-              <div class="half_wrap">
-                <div class="box_gray">
-                  <div class="checks d_block tl">
-                    <input id="" type="checkbox" name="" />
-                    <label for="" class="fs_15 lh20"
-                      ><span class="c_point">*</span> 고유식별정보 수집/이용
-                      동의</label
-                    >
-                  </div>
-                  <div class="checks d_block tl">
-                    <input id="" type="checkbox" name="" />
-                    <label for="" class="fs_15 lh20"
-                      ><span class="c_point">*</span> 개인정보 수집/이용
-                      동의</label
-                    >
-                  </div>
-                </div>
-                <div class="box_gray">
-                  <div class="checks d_block tl">
-                    <input id="" type="checkbox" name="" />
-                    <label for="" class="fs_15 lh20"
-                      >고객 혜택 제공을 위한 수신 동의</label
-                    >
-                  </div>
-                  <div class="checks d_block tl">
-                    <input id="" type="checkbox" name="" />
-                    <label for="" class="fs_15 lh20"
-                      >개인정보 제 3자 제공 동의</label
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <AppBasicInfo class="line_div"></AppBasicInfo>
           <!-- //신청자 기본정보 -->
 
           <!-- 결합 예상 금액 -->
@@ -405,9 +293,7 @@ export default {
           </div>
         </li>
         <li v-if="selectedTab === tabs[1]" class="active">
-          <div class="content_sec mb30">
-            TV
-          </div>
+          <TvSection></TvSection>
         </li>
         <li v-if="selectedTab === tabs[2]" class="active">
           <div class="content_sec mb30">
