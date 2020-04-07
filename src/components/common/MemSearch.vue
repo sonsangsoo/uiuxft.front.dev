@@ -1,13 +1,31 @@
 <script>
+import axios from 'axios'
+
 export default {
   data() {
     return {}
   },
   methods: {
-    searchMember() {
+    searchMember: function() {
       // var searchName = this.searchName;
       // var searchNumber = this.searchNumber;
       // 회원정보  api 연동 ...
+      axios
+        .post(
+          ' http://test-scis.skylife.co.kr/scis/api/smartcntrt/cust/bizInfoVerifyCheck',
+          {
+            searchName: this.searchName,
+            searchNumber: this.searchNumber,
+          }
+        )
+        .then((response) => {
+          console.warn(response)
+          this.result = response.data
+          console.log(this.result)
+        })
+        .catch((ex) => {
+          console.warn('ERROR!!!!! : ', ex)
+        })
     },
   },
 }

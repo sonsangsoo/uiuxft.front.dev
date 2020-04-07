@@ -1,4 +1,4 @@
-F<script>
+<script>
 import MemSearch from '@components/common/MemSearch.vue'
 
 export default {
