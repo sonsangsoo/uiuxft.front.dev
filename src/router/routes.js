@@ -1,11 +1,11 @@
-import store from '@state/store'
+// import store from '@state/store'
 
 export default [
   {
     path: '/',
     name: 'home',
     component: () => lazyLoadView(import('@views/home.vue')),
-  },
+  } /* ,
   {
     path: '/login',
     name: 'login',
@@ -22,8 +22,8 @@ export default [
         }
       },
     },
-  },
-  {
+  }, */,
+  /* {
     path: '/profile',
     name: 'profile',
     component: () => lazyLoadView(import('@views/profile.vue')),
@@ -78,7 +78,7 @@ export default [
         next(authRequiredOnPreviousRoute ? { name: 'home' } : { ...routeFrom })
       },
     },
-  },
+  }, */
   {
     path: '/404',
     name: '404',
