@@ -4,9 +4,20 @@ import SignUpContract from '@views/tv/SignUpContract.vue'
 import SubsLocation from '@views/tv/SubsLocation.vue'
 import SubsContractDetail from '@views/tv/SubsContractDetail.vue'
 import SignUpProductInfo from '@views/tv/SignUpProductInfo.vue'
+import FacilityInfo from '@views/tv/FacilityInfo.vue'
+import SysScheduleInfo from '@views/tv/SysScheduleInfo.vue'
 
 export default {
-  components: { AppBasicInfo, SignUpContract, SubscribedLocation, SubsContractDetail, SignUpProductInfo},
+  components:
+  {
+    AppBasicInfo,
+    SignUpContract,
+    SubsLocation,
+    SubsContractDetail,
+    SignUpProductInfo,
+    FacilityInfo,
+    SysScheduleInfo
+  },
   data() {
     return {}
   },
@@ -193,78 +204,12 @@ export default {
     <!-- //가입수신설비정보 -->
 
     <!-- 수신설비정보 -->
-    <div class="content_sec ty02">
-        <p class="sub_tit">수신설비정보</p>
-
-        <div class="scroll">
-            <table class="table_ty">
-                <caption>수신설비정보 테이블</caption>
-                <thead>
-                    <tr>
-                        <th>구분</th>
-                        <th>판매방식</th>
-                        <th>장비금액</th>
-                        <th>일시/할부금,임대료</th>
-                        <th>보조금</th>
-                        <th>할부/임대 개월 수</th>
-                        <th>의무사용</th>
-                        <th>부케ID</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- 수신 타입 설정 후 hide -->
-        <div class="br_b1 p10_15">
-            <ul>
-                <li class="checks d_block tl">
-                    <input type="checkbox"   name="">
-                    <label for="" class="lh20 fs_14">수신기</label>
-                </li>
-                <li class="checks d_block tl">
-                    <input type="checkbox"   name="">
-                    <label for="" class="lh20 fs_14">안테나</label>
-                </li>
-                <li class="checks d_block tl">
-                    <input type="checkbox"   name="">
-                    <label for="" class="lh20 fs_14">기타부품</label>
-                </li>
-            </ul>
-        </div>
-
-
-        <div class="btm_btns mt20">
-            <a href="#" class="btn_ty ty02">삭제</a>
-            <a href="#" class="btn_ty ty05">수정</a>
-        </div>
-    </div> <!-- //수신설비정보 -->
+    <FacilityInfo></FacilityInfo>
+    <!-- //수신설비정보 -->
 
     <!-- 가입계통예정정보 -->
-    <div class="content_sec ty02 mb0">
-        <span class="sub_tit">가입계통예정정보</span>
-        <div class="d_inBlock checks ml20">
-            <input type="checkbox"   name="">
-            <label for="" class="c_point">실제 고객희망일과 다름</label>
-        </div>
-        <div class="half_wrap ty06">
-            <div>
-                <label for="" class="label_ty">SkyLife YesCenter<span class="c_point">*</span></label>
-                <input type="text" class="input_ty pr40">
-                <button type="submit" class="search_btn" title="검색하기"></button>
-            </div>
-            <div>
-                <label for="" class="label_ty">희망개통일시<span class="c_point">*</span></label>
-                <input type="text" class="input_ty pr40">
-                <button type="submit" class="search_btn" title="검색하기"></button>
-            </div>
-            <div>
-                <label for="" class="label_ty">메모</label>
-                <input type="text" class="input_ty">
-            </div>
-        </div>
-    </div> <!-- //가입계통예정정보 -->
+    <SysScheduleInfo></SysScheduleInfo>
+    <!-- //가입계통예정정보 -->
 
     <div class="btm_btns">
         <a href="#" class="btn_ty ty02 lg">초기화</a>
