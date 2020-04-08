@@ -15,8 +15,8 @@ export default {
       return popNameInfoCheck().then((res) => {
         console.log('popNameInfoCheck!!')
         console.log(res)
-        // console.log(res.name)
-        // console.log(res.content)
+        console.log(res.testName)
+        console.log(res.testContent)
         return res
       })
     },

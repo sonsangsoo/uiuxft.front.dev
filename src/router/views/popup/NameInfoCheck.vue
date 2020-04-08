@@ -5,9 +5,8 @@ export default {
   name: 'NameInfoCheck',
   data() {
     return {
-      testName: 'testName',
-      testContent: 'testContent',
-      popupSeen: true,
+			popupSeen: true,
+			selectedData: null,
     }
   },
   mounted() {
@@ -17,15 +16,28 @@ export default {
     this.$refs.popup.style.marginLeft = -left + 'px'
     this.$refs.popup.style.marginTop = -top + 'px'
   },
-  methods: {},
+  methods: {
+
+		close(){
+			this.selectedData = {
+				testName : 'junseop',
+				testContent : 'park'
+			}
+			if(this.selectedData) {
+				this.$close(this.selectedData);
+			} else {
+				alert("선택된 요청정보가 없습니다.")
+			}
+		}
+	},
 }
 </script>
 
 <template>
   <div
+    v-if="popupSeen"
     id="name_search"
     ref="popup_wrap"
-    v-if="popupSeen"
     class="popup_wrap size01"
   >
     <div ref="popup" class="popup">
@@ -74,7 +86,7 @@ export default {
           >
 
           <div class="pop_btn_wrap">
-            <a href="#;" class="btn_active">확인</a>
+            <a href="#;" class="btn_active" @click="close">확인</a>
           </div>
         </form>
       </div>
