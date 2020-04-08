@@ -16,48 +16,31 @@
       data-timer="null"
       style="display: block; margin-top: -128px;"
     >
-      <div
-        class="sa-icon sa-error"
-        style="display: none;"
-      >
+      <div class="sa-icon sa-error" style="display: none;">
         <span class="sa-x-mark">
           <span class="sa-line sa-left"></span>
           <span class="sa-line sa-right"></span>
         </span>
       </div>
-      <div
-        class="sa-icon sa-warning"
-        style="display: none;"
-      >
+      <div class="sa-icon sa-warning" style="display: none;">
         <span class="sa-body"></span>
         <span class="sa-dot"></span>
       </div>
-      <div
-        class="sa-icon sa-info"
-        style="display: none;"
-      ></div>
-      <div
-        class="sa-icon sa-success"
-        style="display: none;"
-      >
+      <div class="sa-icon sa-info" style="display: none;"></div>
+      <div class="sa-icon sa-success" style="display: none;">
         <span class="sa-line sa-tip"></span>
         <span class="sa-line sa-long"></span>
 
         <div class="sa-placeholder"></div>
         <div class="sa-fix"></div>
       </div>
-      <div
-        class="sa-icon sa-custom"
-        style="display: none;"
-      ></div>
-      <h2>{{title}}</h2>
-      <p style="content: '\A';white-space: pre;display: block;">{{content}}</p>
+      <div class="sa-icon sa-custom" style="display: none;"></div>
+      <h2>{{ title }}</h2>
+      <p style="content: '\A'; white-space: pre; display: block;">{{
+        content
+      }}</p>
       <fieldset>
-        <input
-          type="text"
-          tabindex="3"
-          placeholder=""
-        >
+        <input type="text" tabindex="3" placeholder="" />
         <div class="sa-input-error"></div>
       </fieldset>
       <div class="sa-error-container">
@@ -65,40 +48,38 @@
         <p>Not valid!</p>
       </div>
       <div class="sa-button-container">
+        <button :class="this.type" tabindex="1" @click="$close(true)"
+          >확인</button
+        >
         <button
-          :class="this.type"
-          tabindex="1"
-          @click="$close(true)"
-        >확인</button>
-        <button
-          v-if="this.type == 'confirm'"
+          v-if="this.type === 'confirm'"
           class="cancel"
           tabindex="1"
           @click="$close(false)"
-        >취소</button>
+          >취소</button
+        >
       </div>
     </div>
   </div>
 </template>
-
 
 <script>
 export default {
   name: 'Alert',
   data() {
     return {
-      type: 'success'
-    };
+      type: 'success',
+    }
   },
   created() {
-    const propsData = this.$options.propsData;
+    const propsData = this.$options.propsData
     if (propsData && propsData.arguments.length) {
-      this.title = propsData.arguments[0];
-      this.content = propsData.arguments[1];
-      this.type = propsData.arguments[2];
+      this.title = propsData.arguments[0]
+      this.content = propsData.arguments[1]
+      this.type = propsData.arguments[2]
     }
-  }
-};
+  },
+}
 </script>
 
 <style>

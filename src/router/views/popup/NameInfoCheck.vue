@@ -5,37 +5,39 @@ export default {
   name: 'NameInfoCheck',
   data() {
     return {
-			popupSeen: true,
-			selectedData: null,
+      popupSeen: true,
+      selectedData: null,
     }
   },
   mounted() {
-		// 팝업 위치
+    // 팝업 위치
     const left = this.$refs.popup.scrollWidth / 2
     const top = this.$refs.popup.scrollHeight / 2
     this.$refs.popup.style.marginLeft = -left + 'px'
     this.$refs.popup.style.marginTop = -top + 'px'
   },
   methods: {
-
-		close(){
-			this.selectedData = {
-				testName : 'junseop',
-				testContent : 'park'
-			}
-			if(this.selectedData) {
-				this.$close(this.selectedData);
-			} else {
-				alert("선택된 요청정보가 없습니다.")
-			}
-		}
-	},
+    displayPopup() {
+        this.popupSeen = false
+    },
+    close() {
+      this.selectedData = {
+        testName: 'junseop',
+        testContent: 'park',
+      }
+      if (this.selectedData) {
+        this.$close(this.selectedData)
+      } else {
+        alert('선택된 요청정보가 없습니다.')
+      }
+    },
+  },
 }
 </script>
 
 <template>
   <div
-    v-if="popupSeen"
+    v-show="popupSeen"
     id="name_search"
     ref="popup_wrap"
     class="popup_wrap size01"
@@ -90,8 +92,7 @@ export default {
           </div>
         </form>
       </div>
-      <a href="#;" class="pop_close" @click="popupSeen = !popupSeen"
-        >팝업 닫기</a
+      <a href="#;" class="pop_close" @click="displayPopup">팝업 닫기</a
       ><!-- 닫기 기능은 클래스 pop_close 추가하시면 됩니다. -->
     </div>
   </div>

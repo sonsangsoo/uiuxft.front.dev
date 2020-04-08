@@ -13,8 +13,6 @@ export default {
   methods: {
     testPopUp() {
       return popNameInfoCheck().then((res) => {
-        console.log('popNameInfoCheck!!')
-        console.log(res)
         console.log(res.testName)
         console.log(res.testContent)
         return res
