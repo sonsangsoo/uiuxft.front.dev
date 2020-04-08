@@ -12,27 +12,7 @@ export default {
   computed: {
     ...authComputed,
   },
-  mounted() {
-    // PC용
-    console.log(this.$refs)
-    console.log('size')
-    // $('aside > ul > li > a').on('click', function() {
-
-    // $('.dep3').stop().slideUp('500')
-    // if (!$(this).is('.active')) {
-    //     $('aside > ul > li > a, .dep2 > ul > li > a').removeClass('active')
-    //     $(this).addClass('active')
-    //     $('.dep2_bg, .dep2').hide()
-    //     if ($(this).siblings('.dep2').length > 0) {
-    //     $('.dep2_bg').show('slide', { direction: 'left' }, 500)
-    //     $(this).siblings('.dep2').show('slide', { direction: 'left' }, 500)
-    //     }
-    // } else {
-    //     $('aside > ul > li > a, .dep2 > ul > li > a').removeClass('active')
-    //     $('.dep2_bg, .dep2').hide('slide', { direction: 'left' }, 500)
-
-    // }
-  },
+  mounted() {},
   methods: {
     openMenu() {
       if (this.isActive === false) {

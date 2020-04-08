@@ -1,7 +1,12 @@
 <script>
 import appConfig from '@src/app.config'
+import { DialogsWrapper } from "./components/modal";
 
 export default {
+  name: 'app',
+  components: {
+    DialogsWrapper
+  },
   page: {
     // All subcomponent titles will be injected into this template.
     titleTemplate(title) {
@@ -19,6 +24,7 @@ export default {
     as distinct and create the component again.
     -->
     <RouterView :key="$route.fullPath" />
+    <dialogs-wrapper transition-name="fade"></dialogs-wrapper>
   </div>
 </template>
 

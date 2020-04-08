@@ -1,6 +1,6 @@
 <script>
 import { authComputed } from '@state/helpers'
-
+import { popNameInfoCheck } from '../router/views/popup/index.js'
 
 export default {
   components: {},
@@ -9,12 +9,18 @@ export default {
   },
   computed: {
     ...authComputed,
-  },methods: {
-    testPopUp(){
-
-
-    }
-  }
+  },
+  methods: {
+    testPopUp() {
+      return popNameInfoCheck().then((res) => {
+        console.log('popNameInfoCheck!!')
+        console.log(res)
+        // console.log(res.name)
+        // console.log(res.content)
+        return res
+      })
+    },
+  },
 }
 </script>
 
@@ -22,7 +28,9 @@ export default {
   <header data-color="green">
     <div class="hd_sub">
       <h1 class="hd_logo"
-        ><a href="#" title="kt skylife 바로가기" @click="testPopUp">kt skylife</a></h1
+        ><a href="#" title="kt skylife 바로가기" @click="testPopUp"
+          >kt skylife</a
+        ></h1
       >
       <div class="hd_search">
         <input type="text" placeholder="화면 ID" />
