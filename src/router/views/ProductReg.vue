@@ -1,9 +1,10 @@
 <script>
 import TvSection from '@views/tv/Tv.vue'
 import AppBasicInfo from '@views/common/AppBasicInfo.vue'
+import InternetSection from '@views/internet/Internet.vue'
 
 export default {
-  components: { TvSection, AppBasicInfo },
+  components: { TvSection, InternetSection, AppBasicInfo },
   data() {
     return {
       isTabAtive: true,
@@ -254,7 +255,7 @@ export default {
 
           <!-- 결합 예상 금액 -->
           <div class="content_sec ty02 mb0">
-            <span class="sub_tit d_inBlock">결합예상금액</span>
+            <span class="sub_tit mb10">결합예상금액</span>
             <span class="ml20 c_point" style="vertical-align: 3px;">
               * 요금은 요금감면 및 기타 할인 적용되지 않은 예상 금액입니다.
             </span>
@@ -296,9 +297,7 @@ export default {
           <TvSection></TvSection>
         </li>
         <li v-if="selectedTab === tabs[2]" class="active">
-          <div class="content_sec mb30">
-            INTERNET
-          </div>
+            <InternetSection></InternetSection>
         </li>
         <li v-if="selectedTab === tabs[3]" class="active">
           <div class="content_sec mb30">

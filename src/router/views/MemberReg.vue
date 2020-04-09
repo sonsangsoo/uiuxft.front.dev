@@ -189,10 +189,8 @@ export default {
         <!--청구계정 -->
         <li v-if="selectedTab === tabs[1]" class="active">
           <div class="content_sec ty02">
-            <span class="sub_tit d_inBlock">고객기본정보</span>
-            <span class="ml15 c_point" style="vertical-align: 5px;"
-              >* 고객정보 입력 완료</span
-            >
+            <span class="sub_tit mb10">고객기본정보</span>
+            <span class="ml15 c_point lh20" style="vertical-align: 1px;">* 고객정보 입력 완료</span>
             <div class="content_sec half_wrap">
               <div>
                 <label for="" class="label_ty">고객번호</label>
