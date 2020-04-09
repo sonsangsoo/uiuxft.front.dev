@@ -53,7 +53,7 @@ export default {
     <div class="btm_btns">
       <a href="#" class="btn_ty ty02 lg">초기화</a>
       <a href="#" class="btn_ty ty03 lg">저장</a>
-      <a href="#" class="btn_ty ty04 lg" style="width: 165px;">승인요청</a>
+      <a href="#" class="btn_ty ty04 lg">승인요청</a>
     </div>
   </li>
   <!-- //홈렌탈 -->

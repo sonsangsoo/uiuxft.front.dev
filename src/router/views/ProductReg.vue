@@ -176,7 +176,7 @@ export default {
                 </tbody>
               </table>
               <div class="btm_btns mt20"
-                ><a href="#" class="btn_ty ty04">결합하기</a></div
+                ><a href="#" class="btn_ty ty06">결합하기</a></div
               >
             </div>
           </div>
