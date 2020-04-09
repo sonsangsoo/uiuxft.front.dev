@@ -1,5 +1,10 @@
 <script>
+import Post from '@views/common/Post.vue'
+
 export default {
+  components:{
+    Post
+  },
   data() {
     return {}
   },
@@ -15,23 +20,7 @@ export default {
         <input type="checkbox" name="" />
         <label for="" class="c_point">인터넷 정보와 동일</label>
       </div>
-      <div class="half_wrap ty08">
-        <div>
-          <label for="" class="label_ty"
-            >우편번호<span class="c_point">*</span></label
-          >
-          <input type="text" class="input_ty pr40" />
-          <button type="submit" class="search_btn" title="검색하기"></button>
-        </div>
-        <div>
-          <label for="" class="label_ty">주소</label>
-          <input type="text" class="input_ty" />
-        </div>
-        <div>
-          <label for="" class="label_ty">상세주소</label>
-          <input type="text" class="input_ty" />
-        </div>
-      </div>
+      <Post></Post>
       <div class="mt15 half_wrap">
         <div>
           <label for="" class="label_ty"

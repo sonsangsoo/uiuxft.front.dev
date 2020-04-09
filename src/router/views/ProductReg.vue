@@ -2,9 +2,10 @@
 import TvSection from '@views/tv/Tv.vue'
 import AppBasicInfo from '@views/common/AppBasicInfo.vue'
 import InternetSection from '@views/internet/Internet.vue'
+import homeRentalSection from '@views/homeRental/homeRental.vue'
 
 export default {
-  components: { TvSection, InternetSection, AppBasicInfo },
+  components: { TvSection, InternetSection, homeRentalSection, AppBasicInfo },
   data() {
     return {
       isTabAtive: true,
@@ -297,11 +298,11 @@ export default {
           <TvSection></TvSection>
         </li>
         <li v-if="selectedTab === tabs[2]" class="active">
-            <InternetSection></InternetSection>
+          <InternetSection></InternetSection>
         </li>
         <li v-if="selectedTab === tabs[3]" class="active">
           <div class="content_sec mb30">
-            HOME RENTAL
+            <homeRentalSection></homeRentalSection>
           </div>
         </li>
         <li v-if="selectedTab === tabs[4]" class="active">

@@ -1,5 +1,11 @@
 <script>
+import Applicant from '@views/common/Applicant.vue'
+
 export default {
+  name: "AppBasicInfo",
+  components:{
+    Applicant
+  },
   data() {
     return {}
   },
@@ -87,37 +93,7 @@ export default {
         </div>
       </div>
     </div>
-    <div class="mt15">
-      <p class="fs_13 c_gray lh1 mb7">신청자<span class="c_point">*</span></p>
-      <div class="half_wrap">
-        <div class="box_gray">
-          <div class="checks d_block tl">
-            <input type="checkbox" name="" />
-            <label for="" class="fs_15 lh20"
-              ><span class="c_point">*</span> 고유식별정보 수집/이용 동의</label
-            >
-          </div>
-          <div class="checks d_block tl">
-            <input type="checkbox" name="" />
-            <label for="" class="fs_15 lh20">
-              <span class="c_point">*</span> 개인정보 수집/이용 동의
-            </label>
-          </div>
-        </div>
-        <div class="box_gray">
-          <div class="checks d_block tl">
-            <input type="checkbox" name="" />
-            <label for="" class="fs_15 lh20"
-              >고객 혜택 제공을 위한 수신 동의</label
-            >
-          </div>
-          <div class="checks d_block tl">
-            <input type="checkbox" name="" />
-            <label for="" class="fs_15 lh20">개인정보 제 3자 제공 동의</label>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Applicant></Applicant>
   </div>
   <!-- //신청자 기본정보 -->
 </template>
