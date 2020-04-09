@@ -5,6 +5,7 @@
 $(function () {
   Size_pc()
   tab()
+  dropdown()
 
   // 스크롤 박스 안에 목록 클릭 event
   $('.scroll_box li > a').on('click', function (e) {
@@ -66,6 +67,20 @@ $(function () {
     }
   })
 })
+
+function dropdown() {
+  var drop_btn = $('.hd_utill .hd_btn > li > a')
+
+  drop_btn.on('click', function (e) {
+    e.preventDefault()
+    if ($(this).parent().is('.open')) {
+      $(this).parent().removeClass('open')
+    } else {
+      drop_btn.parent().removeClass('open')
+      $(this).parent().addClass('open')
+    }
+  })
+}
 
 function tab() {
   var tabindex

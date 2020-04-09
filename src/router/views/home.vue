@@ -17,7 +17,7 @@ export default {
 <template>
   <div>
     <Header></Header>
-    <div id="wrap" data-color="green">
+    <div id="wrap" data-color="mint">
       <Aside></Aside>
       <Section></Section>
     </div>
