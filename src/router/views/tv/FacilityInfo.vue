@@ -53,7 +53,7 @@ export default {
 
         <div class="btm_btns mt20">
             <a href="#" class="btn_ty ty02">삭제</a>
-            <a href="#" class="btn_ty ty05">수정</a>
+            <a href="#" class="btn_ty ty06">수정</a>
         </div>
     </div>
     <!-- //수신설비정보 -->

@@ -2,28 +2,23 @@
 import AppBasicInfo from '@views/common/AppBasicInfo.vue'
 import SignUpContract from '@views/common/SignUpContract.vue'
 import SingUpLocaInfo from '@views/common/SingUpLocaInfo.vue'
-import SubsAttrInfo from '@views/common/SubsAttrInfo.vue'
 import SubsContractDetail from '@views/common/SubsContractDetail.vue'
-import SignUpProductInfo from '@views/tv/SignUpProductInfo.vue'
-import ReceFacilityInfo from '@views/tv/ReceFacilityInfo.vue'
-import FacilityInfo from '@views/tv/FacilityInfo.vue'
-import SysScheduleInfo from '@views/tv/SysScheduleInfo.vue'
+import SubsAttrInfo from '@views/common/SubsAttrInfo.vue'
+import OpeningInfo from '@views/internet/OpeningInfo.vue'
 
 export default {
+  name: 'Internet',
   components: {
     SubsAttrInfo,
     AppBasicInfo,
     SignUpContract,
     SingUpLocaInfo,
     SubsContractDetail,
-    SignUpProductInfo,
-    ReceFacilityInfo,
-    FacilityInfo,
-    SysScheduleInfo,
+    OpeningInfo,
   },
   data() {
     return {
-      Name : 'tv'
+      Name: 'internet',
     }
   },
   mounted() {},
@@ -32,18 +27,19 @@ export default {
 </script>
 
 <template>
-  <div>
+  <!-- 인터넷 -->
+  <li>
     <!-- 가입유치정보 -->
     <SubsAttrInfo></SubsAttrInfo>
     <!-- //가입유치정보 -->
 
     <!-- 신청자 기본정보 -->
     <AppBasicInfo></AppBasicInfo>
-    <!-- 신청자 기본정보 -->
+    <!-- //신청자 기본정보 -->
 
     <!-- 가입계약기본정보 -->
     <SignUpContract></SignUpContract>
-    <!-- 가입계약기본정보 -->
+    <!-- //가입계약기본정보 -->
 
     <!-- 가입설치장소정보 -->
     <SingUpLocaInfo></SingUpLocaInfo>
@@ -53,21 +49,9 @@ export default {
     <SubsContractDetail></SubsContractDetail>
     <!-- //가입계약상세정보 -->
 
-    <!-- 가입상품정보 -->
-    <SignUpProductInfo></SignUpProductInfo>
-    <!-- //가입상품정보 -->
-
-    <!-- 가입수신설비정보 -->
-    <ReceFacilityInfo></ReceFacilityInfo>
-    <!-- //가입수신설비정보 -->
-
-    <!-- 수신설비정보 -->
-    <FacilityInfo></FacilityInfo>
-    <!-- //수신설비정보 -->
-
-    <!-- 가입계통예정정보 -->
-    <SysScheduleInfo></SysScheduleInfo>
-    <!-- //가입계통예정정보 -->
+    <!-- 개통정보 -->
+    <OpeningInfo></OpeningInfo>
+    <!-- //개통정보 -->
 
     <div class="btm_btns">
       <a href="#" class="btn_ty ty02 lg">초기화</a>
@@ -76,7 +60,8 @@ export default {
         >증빙자료등록/수정</a
       >
     </div>
-  </div>
+  </li>
+  <!-- //인터넷 -->
 </template>
 
 <style lang="scss" module>
