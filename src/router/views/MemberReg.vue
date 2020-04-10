@@ -1,10 +1,19 @@
 <script>
-import MemSearch from '@components/common/MemSearch.vue'
-import RealNameCheck from '@components/common/RealNameCheck.vue'
-import PostSearch from '@components/common/PostSearch.vue'
-
 export default {
-  components: { MemSearch, RealNameCheck, PostSearch },
+  // components: { MemSearch, RealNameCheck, PostSearch },
+  components: {
+    BizInfoInput: () => import('@views/dashboard/BizInfoInput.vue'),
+    PersonfoInput: () => import('@views/dashboard/PersonfoInput.vue'),
+  },
+  computed: {
+    showComponent() {
+      if (this.inputFormDiv === 'PersonfoInput') {
+        return 'PersonfoInput'
+      } else {
+        return 'BizInfoInput'
+      }
+    },
+  },
   data() {
     return {
       isTabAtive: false,
@@ -16,15 +25,14 @@ export default {
         { value: '7', text: '홈렌탈 가입' },
         { value: '4', text: '법인' },
         { value: '6', text: '외국법인' },
-        { value: '3', text: '개인법인' },
+        { value: '3', text: '개인사업자' },
         { value: '5', text: '공공기관' },
       ],
+      inputFormDiv: 'PersonfoInput',
+      egov: false,
     }
   },
-  computed: {
-    // eslint-disable-next-line vue/return-in-computed-property
-    chagePersonType: function() {},
-  },
+
   mounted() {
     console.log(this.$refs)
     this.selectedTab = this.tabs[0]
@@ -33,17 +41,49 @@ export default {
     openTabMenu(tab) {
       this.selectedTab = tab
     },
+    chagePersonType(event) {
+      if (
+        event.target.value === '1' ||
+        event.target.value === '2' ||
+        event.target.value === '7'
+      ) {
+        this.inputFormDiv = 'PersonfoInput'
+      } else {
+        this.inputFormDiv = 'BizInfoInput'
+      }
+
+      if (event.target.value === '5') {
+        this.egov = true
+      } else {
+        this.egov = false
+      }
+    },
   },
 }
 </script>
 
 <template>
   <article class="box">
-    <!-- 고객정보 조회 공통 컴포넌트 -->
-    <MemSearch></MemSearch>
+    <div class="top_cnts">
+      <div class="info_sec">
+        <input
+          type="text"
+          placeholder="고객명/회사명"
+          title="고객명/회사명"
+          class="input_ty cust_name"
+        />
+        <input
+          type="text"
+          placeholder="생년월일/사업자등록번호"
+          title="생년월일/사업자등록번호"
+          class="input_ty cust_date"
+        />
+      </div>
+      <a href="#" class="btn_ty circle01 lookup_btn" title="조회하기">조회</a>
+    </div>
 
     <!-- Tab -->
-    <ul id="info_tab" class="tab ty01">
+    <ul class="tab ty01" id="info_tab">
       <li v-for="tab in tabs" :key="tab">
         <a
           :class="{ active: tab === selectedTab }"
@@ -58,9 +98,9 @@ export default {
       <ul class="tab_cnt_list">
         <!-- 고객정보 -->
         <li v-if="selectedTab === tabs[0]" class="active">
-          <div class="clear mb20">
-            <a href="#" class="btn_ty circle02 fr">정보열람</a>
-          </div>
+          <div class="clear mb20"
+            ><a href="#" class="btn_ty circle02 fr">정보열람</a></div
+          >
           <div class="content_sec half_wrap">
             <div>
               <label for="" class="label_ty">고객번호</label>
@@ -70,119 +110,26 @@ export default {
               <label for="" class="label_ty"
                 >고객구분<span class="c_point">*</span></label
               >
-              <!--<input type="text" class="input_ty">-->
-              <select v-model="personTypes.code" class="sel_ty w100">
-                <option v-for="opt in personTypes" :key="opt.value">{{
-                  opt.text
-                }}</option>
-              </select>
-            </div>
-          </div>
-          <div class="content_sec">
-            <div>
-              <label for="" class="label_ty"
-                >고객명<span class="c_point">*</span></label
-              >
-              <input type="text" class="input_ty" />
-            </div>
-          </div>
-          <!--성명정보 조회 공통 컴포넌트 -->
-          <RealNameCheck></RealNameCheck>
-          <!--우편번호 검색 공통 컴포넌트 -->
-          <PostSearch></PostSearch>
-          <div class="content_sec">
-            <div>
-              <label for="" class="label_ty"
-                >주소<span class="c_point">*</span></label
-              >
-              <input type="text" class="input_ty" />
-            </div>
-          </div>
-          <div class="content_sec">
-            <label for="" class="label_ty">전화번호</label>
-            <div class="half_wrap ty02">
-              <div><input type="text" class="input_ty"/></div>
-              <div class="checks">
-                <input id="" type="radio" name="" checked />
-                <label for="" class="pl20">수신</label>
-                <input id="" type="radio" name="" />
-                <label for="" class="pl20">거부</label>
-              </div>
-            </div>
-          </div>
-          <div class="content_sec">
-            <label for="" class="label_ty"
-              >핸드폰<span class="c_point">*</span></label
-            >
-            <div class="half_wrap ty02">
-              <div><input type="text" class="input_ty"/></div>
-              <div class="checks">
-                <input id="" type="radio" name="" checked />
-                <label for="" class="pl20">수신</label>
-                <input id="" type="radio" name="" />
-                <label for="" class="pl20">거부</label>
-              </div>
-            </div>
-          </div>
-          <div class="content_sec">
-            <label for="" class="label_ty"
-              >이메일<span class="c_point">*</span></label
-            >
-            <div class="email_input half_wrap ty04">
-              <div><input type="text" class="input_ty"/></div>
-              <div>
-                <span class="email_at">@</span>
-                <input type="text" class="input_ty w132p" />
-              </div>
-            </div>
-            <div class="half_wrap mt5 ty04">
-              <div>
-                <select
-                  id=""
-                  name=""
-                  class="sel_ty w100"
-                  title="이메일 주소 선택"
+              <!-- 0401 : 퍼블리싱 수정 -->
+              <select class="sel_ty w100 sel_cust_ty" @change="chagePersonType">
+                <option
+                  v-for="(item, index) in personTypes"
+                  v-bind:item="item"
+                  v-bind:index="index"
+                  v-bind:key="item.value"
+                  v-bind:value="item.value"
                 >
-                  <option value="">직접입력</option>
-                  <option value="">naver.com</option>
-                  <option value="">gmail.com</option>
-                </select>
-              </div>
-              <div>
-                <div class="checks">
-                  <input id="" type="radio" name="" checked />
-                  <label for="" class="pl20">수신</label>
-                  <input id="" type="radio" name="" />
-                  <label for="" class="pl20">거부</label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="content_sec mb0">
-            <div>
-              <label for="" class="label_ty"
-                >감면구분<span class="c_point">*</span></label
-              >
-              <select
-                id=""
-                name=""
-                class="sel_ty w100 medium"
-                title="감면구분 선택"
-              >
-                <option value="">심신장애인</option>
-                <option value="">국가유공상이자</option>
-                <option value="">애국지사</option>
-                <option value="">독립유공자</option>
-                <option value="">독립유공자유족</option>
-                <option value="">기초생활수급자</option>
-                <option value="">5.18민주유공자</option>
-                <option value="">북한이탈주민</option>
-                <option value="">장애니 단체</option>
-                <option value="">국가유공자 단체</option>
-                <option value="">아동복지시설</option>
+                  {{ item.text }}
+                </option>
               </select>
             </div>
           </div>
+          <ul class="cust_ty_list">
+            <keep-alive>
+              <!--고객정보 입력(개인/법인) 동적 컴포넌트 bind-->
+              <component :is="showComponent" :egov="egov"></component>
+            </keep-alive>
+          </ul>
           <div class="btm_btns">
             <a href="#" class="btn_ty ty02 lg w90p">초기화</a>
             <a href="#" class="btn_ty ty03 lg w90p">저장</a>
@@ -191,7 +138,7 @@ export default {
         </li>
         <!-- //고객정보 -->
 
-        <!--청구계정 -->
+        <!-- 청구계정 -->
         <li v-if="selectedTab === tabs[1]" class="active">
           <div class="content_sec ty02">
             <span class="sub_tit d_inBlock">고객기본정보</span>
@@ -255,7 +202,7 @@ export default {
                   <div class="content_sec half_wrap">
                     <div>
                       <label for="" class="label_ty">업종 구분</label>
-                      <select id="" name="" class="sel_ty w100" title="">
+                      <select name="" id="" class="sel_ty w100" title="">
                         <option value="">선택</option>
                       </select>
                     </div>
@@ -277,7 +224,7 @@ export default {
                 <!-- 0406 : 퍼블리싱 수정 -->
                 <a href="#">청구처 사항</a>
                 <div class="d_inBlock checks ml15">
-                  <input id="" type="checkbox" name="" />
+                  <input type="checkbox" id="" name="" />
                   <label for="" class="c_point">고객정보와 동일</label>
                 </div>
               </dt>
@@ -367,7 +314,7 @@ export default {
                     <label for="" class="label_ty"
                       >매출구분<span class="c_point">*</span></label
                     >
-                    <select id="" name="" class="sel_ty w100" title="">
+                    <select name="" id="" class="sel_ty w100" title="">
                       <option value="">외부매출</option>
                       <option value="">내부매출</option>
                     </select>
@@ -377,7 +324,7 @@ export default {
                       >세금계산서 발행여부<span class="c_point">*</span></label
                     >
                     <div class="checks d_block br_b1 h40">
-                      <input id="test" type="checkbox" name="" />
+                      <input type="checkbox" id="test" name="" />
                       <label for="test" class="c_point"></label>
                     </div>
                   </div>
@@ -387,7 +334,7 @@ export default {
                     <label for="" class="label_ty"
                       >과세구분<span class="c_point">*</span></label
                     >
-                    <select id="" name="" class="sel_ty w100" title="">
+                    <select name="" id="" class="sel_ty w100" title="">
                       <option value="">과세</option>
                       <option value="">영세</option>
                     </select>
@@ -397,8 +344,8 @@ export default {
                       >납부방법<span class="c_point">*</span></label
                     >
                     <select
-                      id=""
                       name=""
+                      id=""
                       class="sel_ty w100 sel_transfer"
                       title=""
                     >
@@ -410,13 +357,13 @@ export default {
                 <div class="content_sec half_wrap">
                   <div>
                     <label for="" class="label_ty">지로납기일</label>
-                    <select id="" name="" class="sel_ty w100" title="">
+                    <select name="" id="" class="sel_ty w100" title="">
                       <option value="">선택</option>
                     </select>
                   </div>
                   <div>
                     <label for="" class="label_ty">서명방식</label>
-                    <select id="" name="" class="sel_ty w100" title="">
+                    <select name="" id="" class="sel_ty w100" title="">
                       <option value="">선택</option>
                     </select>
                   </div>
@@ -425,8 +372,8 @@ export default {
                   <div>
                     <label for="" class="label_ty">청구매체</label>
                     <select
-                      id=""
                       name=""
+                      id=""
                       class="sel_ty w100 medium"
                       title="청구매체 선택"
                     >
@@ -446,8 +393,8 @@ export default {
                   <div class="half_wrap mt5 ty04">
                     <div>
                       <select
-                        id=""
                         name=""
+                        id=""
                         class="sel_ty w100"
                         title="이메일 주소 선택"
                       >
@@ -458,7 +405,7 @@ export default {
                     </div>
                     <div>
                       <div class="checks pl20">
-                        <input id="" type="checkbox" name="" checked="" />
+                        <input type="checkbox" id="" name="" checked="" />
                         <label for="" class="lh15 h40 pt3"
                           >복수청구매체<br />(E-mail) 허용</label
                         >
@@ -469,7 +416,7 @@ export default {
                 <div class="content_sec half_wrap mb0">
                   <div>
                     <label for="" class="label_ty">현금영수증 발행여부</label>
-                    <select id="" name="" class="sel_ty w100" title="">
+                    <select name="" id="" class="sel_ty w100" title="">
                       <option value="">선택</option>
                     </select>
                   </div>
@@ -501,7 +448,7 @@ export default {
                   <div>
                     <label for="" class="label_ty">자동납부 동의여부</label>
                     <div class="checks d_block br_b1 h40">
-                      <input id="" type="checkbox" name="" />
+                      <input type="checkbox" id="" name="" />
                       <label for="" class="c_point"></label>
                     </div>
                   </div>
@@ -534,13 +481,13 @@ export default {
                     <div class="content_sec half_wrap">
                       <div>
                         <label for="" class="label_ty">신용카드사</label>
-                        <select id="" name="" class="sel_ty w100" title="">
+                        <select name="" id="" class="sel_ty w100" title="">
                           <option value="">선택</option>
                         </select>
                       </div>
                       <div>
                         <label for="" class="label_ty">할부개월수</label>
-                        <select id="" name="" class="sel_ty w100" title="">
+                        <select name="" id="" class="sel_ty w100" title="">
                           <option value="">선택</option>
                         </select>
                       </div>
@@ -578,7 +525,7 @@ export default {
                     <div class="content_sec">
                       <div>
                         <label for="" class="label_ty">금융기관</label>
-                        <select id="" name="" class="sel_ty w100" title="">
+                        <select name="" id="" class="sel_ty w100" title="">
                           <option value="">선택</option>
                         </select>
                       </div>
