@@ -26,7 +26,9 @@ export default {
   <header data-color="mint">
     <div class="hd_sub">
       <h1 class="hd_logo"
-        ><a href="#" title="kt skylife 바로가기">kt skylife</a></h1
+        ><a href="#" title="kt skylife 바로가기" @click="testPopUp"
+          >kt skylife</a
+        ></h1
       >
       <div class="hd_search">
         <input type="text" placeholder="화면 ID" />
