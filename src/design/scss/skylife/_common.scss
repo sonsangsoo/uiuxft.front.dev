@@ -82,7 +82,7 @@ select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	background: url(/assets/images/template/ico_sel_arr.png) no-repeat 90% 50%, #fff;
+	background: url("~@assets/images/template/ico_sel_arr.png") no-repeat 90% 50%, #fff;
 	border: 1px solid #cccfd4;
 	outline: 0;
 	letter-spacing: -1px;
@@ -312,7 +312,7 @@ aside {
 		overflow: hidden;
 		margin: 15px 0;
 		border-radius: 50%;
-		background: url(/assets/images/layout/burger.png) no-repeat center center;
+		background: url("~@assets/images/layout/burger.png") no-repeat center center;
 	}
 	>ul {
 		>li {
@@ -341,70 +341,70 @@ aside {
 		>li.lnb_li01 {
 			>a {
 				&:before {
-					background: url(/assets/images/template/lnb/ico_lnb01.png) no-repeat center center;
+					background: url("~@assets/images/template/lnb/ico_lnb01.png") no-repeat center center;
 				}
 			}
 		}
 		>li.lnb_li02 {
 			>a {
 				&:before {
-					background: url(/assets/images/template/lnb/ico_lnb02.png) no-repeat center center;
+					background: url("~@assets/images/template/lnb/ico_lnb02.png") no-repeat center center;
 				}
 			}
 		}
 		>li.lnb_li03 {
 			>a {
 				&:before {
-					background: url(/assets/images/template/lnb/ico_lnb03.png) no-repeat center center;
+					background: url("~@assets/images/template/lnb/ico_lnb03.png") no-repeat center center;
 				}
 			}
 		}
 		>li.lnb_li04 {
 			>a {
 				&:before {
-					background: url(/assets/images/template/lnb/ico_lnb04.png) no-repeat center center;
+					background: url("~@assets/images/template/lnb/ico_lnb04.png") no-repeat center center;
 				}
 			}
 		}
 		>li.lnb_li05 {
 			>a {
 				&:before {
-					background: url(/assets/images/template/lnb/ico_lnb05.png) no-repeat center center;
+					background: url("~@assets/images/template/lnb/ico_lnb05.png") no-repeat center center;
 				}
 			}
 		}
 		>li.lnb_li06 {
 			>a {
 				&:before {
-					background: url(/assets/images/template/lnb/ico_lnb06.png) no-repeat center center;
+					background: url("~@assets/images/template/lnb/ico_lnb06.png") no-repeat center center;
 				}
 			}
 		}
 		>li.lnb_li07 {
 			>a {
 				&:before {
-					background: url(/assets/images/template/lnb/ico_lnb07.png) no-repeat center center;
+					background: url("~@assets/images/template/lnb/ico_lnb07.png") no-repeat center center;
 				}
 			}
 		}
 		>li.lnb_li08 {
 			>a {
 				&:before {
-					background: url(/assets/images/template/lnb/ico_lnb08.png) no-repeat center center;
+					background: url("~@assets/images/template/lnb/ico_lnb08.png") no-repeat center center;
 				}
 			}
 		}
 		>li.lnb_li09 {
 			>a {
 				&:before {
-					background: url(/assets/images/template/lnb/ico_lnb09.png) no-repeat center center;
+					background: url("~@assets/images/template/lnb/ico_lnb09.png") no-repeat center center;
 				}
 			}
 		}
 		>li.lnb_li10 {
 			>a {
 				&:before {
-					background: url(/assets/images/template/lnb/ico_lnb10.png) no-repeat center center;
+					background: url("~@assets/images/template/lnb/ico_lnb10.png") no-repeat center center;
 				}
 			}
 		}
@@ -439,7 +439,7 @@ header {
 		>a {
 			width: 123px;
 			height: 32px;
-			background: url(/assets/images/layout/logo.png) no-repeat center center;
+			background: url("~@assets/images/layout/logo.png") no-repeat center center;
 			font-size: 0;
 			background-size: 100%;
 		}
@@ -597,13 +597,13 @@ body {
 				transition: all 0.3s;
 			}
 			>a.info_btn {
-				background: url(/assets/images/template/header/ico_info.png) no-repeat center center;
+				background: url("~@assets/images/template/header/ico_info.png") no-repeat center center;
 				&:hover {
 					transform: rotate(360deg);
 				}
 			}
 			>a.favorite_btn {
-				background: url(/assets/images/template/header/ico_favorite.png) no-repeat center center;
+				background: url("~@assets/images/template/header/ico_favorite.png") no-repeat center center;
 			}
 			>a.general_btn {
 				&:hover {
@@ -686,13 +686,13 @@ body {
 					top: 0;
 					height: 100%;
 					width: 11px;
-					background: url(/assets/images/template/ico_list_arr.png) no-repeat center center;
+					background: url("~@assets/images/template/ico_list_arr.png") no-repeat center center;
 					transition: all 0.3s linear;
 				}
 			}
 			>a.active {
 				&:after {
-					background: url(/assets/images/template/ico_list_arr_ov.png) no-repeat center center;
+					background: url("~@assets/images/template/ico_list_arr_ov.png") no-repeat center center;
 					transform: rotate(180deg);
 				}
 			}

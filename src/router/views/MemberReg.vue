@@ -5,15 +5,6 @@ export default {
     BizInfoInput: () => import('@views/dashboard/BizInfoInput.vue'),
     PersonfoInput: () => import('@views/dashboard/PersonfoInput.vue'),
   },
-  computed: {
-    showComponent() {
-      if (this.inputFormDiv === 'PersonfoInput') {
-        return 'PersonfoInput'
-      } else {
-        return 'BizInfoInput'
-      }
-    },
-  },
   data() {
     return {
       isTabAtive: false,
@@ -32,7 +23,15 @@ export default {
       egov: false,
     }
   },
-
+  computed: {
+    showComponent() {
+      if (this.inputFormDiv === 'PersonfoInput') {
+        return 'PersonfoInput'
+      } else {
+        return 'BizInfoInput'
+      }
+    },
+  },
   mounted() {
     console.log(this.$refs)
     this.selectedTab = this.tabs[0]
@@ -60,6 +59,7 @@ export default {
     },
   },
 }
+/* eslint-disable */
 </script>
 
 <template>

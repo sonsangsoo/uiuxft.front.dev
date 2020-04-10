@@ -906,7 +906,7 @@
   top: 50%;
   transform: translateY(-50%);
   right: 0;
-  background: url(/assets/images/template/ico_search.png) no-repeat center center;
+  background: url(~@assets/images/template/ico_search.png) no-repeat center center;
 }
 .lg_search_btn {
   display: block;
@@ -915,7 +915,7 @@
   overflow: hidden;
   text-indent: -9999px;
   font-size: 0;
-  background: url(/assets/images/template/ico_search_white.png) no-repeat center
+  background: url(~@assets/images/template/ico_search_white.png) no-repeat center
       center,
     #687487;
   border-radius: 5px;
@@ -1216,7 +1216,7 @@
         width: 18px;
         height: 18px;
         display: inline-block;
-        background: url(/assets/images/template/chk_off.png) no-repeat center center;
+        background: url(~@assets/images/template/chk_off.png) no-repeat center center;
         vertical-align: middle;
         overflow: hidden;
         text-indent: -9999px;
@@ -1225,7 +1225,7 @@
     &:checked {
       + {
         label {
-          background: url(/assets/images/template/chk_on.png) no-repeat center center;
+          background: url(~@assets/images/template/chk_on.png) no-repeat center center;
         }
       }
     }
@@ -1257,7 +1257,7 @@
           left: 0;
           width: 18px;
           height: 18px;
-          background: url(/assets/images/template/chk_off.png) no-repeat center
+          background: url(~@assets/images/template/chk_off.png) no-repeat center
             center;
           transform: translateY(-50%);
         }
@@ -1267,7 +1267,7 @@
       + {
         label {
           &:before {
-            background: url(/assets/images/template/chk_on.png) no-repeat center
+            background: url(~@assets/images/template/chk_on.png) no-repeat center
               center;
           }
         }
@@ -1296,7 +1296,7 @@
           left: 0;
           width: 17px;
           height: 17px;
-          background: url(/assets/images/template/rad_off.png) no-repeat center
+          background: url(~@assets/images/template/rad_off.png) no-repeat center
             center;
           transform: translateY(-50%);
         }
@@ -1306,7 +1306,7 @@
       + {
         label {
           &:before {
-            background: url(/assets/images/template/rad_on.png) no-repeat center
+            background: url(~@assets/images/template/rad_on.png) no-repeat center
               center;
           }
         }
@@ -1349,7 +1349,7 @@ label.c_point {
       width: 14px;
       height: 13px;
       text-indent: -9999px;
-      background: url(/assets/images/template/ico_close.jpg) no-repeat 0 0;
+      background: url(~@assets/images/template/ico_close.jpg) no-repeat 0 0;
     }
   }
   .pop_head {
@@ -1402,7 +1402,7 @@ label.c_point {
     font-size: 17px;
     color: #333;
     border: 1px solid #cccfd4;
-    background: #fff url(/assets/images/template/ico_select.jpg) no-repeat right 15px
+    background: #fff url(~@assets/images/template/ico_select.jpg) no-repeat right 15px
       center;
     width: 100%;
     &:focus {
@@ -1582,7 +1582,7 @@ label.c_point {
       height: 45px;
       text-indent: -9999px;
       border-radius: 10px;
-      background: #687487 url(/assets/images/template/ico_pop_search.png) no-repeat
+      background: #687487 url(~@assets/images/template/ico_pop_search.png) no-repeat
         center;
     }
   }
@@ -1896,13 +1896,13 @@ label.c_point {
         display: inline-block;
         width: 25px;
         height: 25px;
-        background-image: url(/assets/images/template/ico_radio.png);
+        background-image: url(~@assets/images/template/ico_radio.png);
       }
     }
     &:checked {
       + {
         i {
-          background-image: url(/assets/images/template/ico_radio_on.png);
+          background-image: url(~@assets/images/template/ico_radio_on.png);
         }
       }
     }
@@ -1939,17 +1939,17 @@ label.c_point {
   }
   > a.first {
     width: 34px;
-    background-image: url(/assets/images/template/ico_first.jpg);
+    background-image: url(~@assets/images/template/ico_first.jpg);
   }
   > a.prev {
-    background-image: url(/assets/images/template/ico_prev.jpg);
+    background-image: url(~@assets/images/template/ico_prev.jpg);
   }
   > a.next {
-    background-image: url(/assets/images/template/ico_next.jpg);
+    background-image: url(~@assets/images/template/ico_next.jpg);
   }
   > a.last {
     width: 34px;
-    background-image: url(/assets/images/template/ico_last.jpg);
+    background-image: url(~@assets/images/template/ico_last.jpg);
   }
   ol {
     display: inline-block;
@@ -1995,7 +1995,7 @@ label.c_point {
     padding: 0 !important;
     border: 0 !important;
     text-indent: -9999px;
-    background: url(/assets/images/template/ico_search_inp.jpg) no-repeat center;
+    background: url(~@assets/images/template/ico_search_inp.jpg) no-repeat center;
   }
 }
 .tab_wrap {
@@ -2265,7 +2265,7 @@ label.c_point {
     top: 0;
     width: 20px;
     height: 20px;
-    background: url(/assets/images/template/ico_bullet.png) no-repeat center center;
+    background: url(~@assets/images/template/ico_bullet.png) no-repeat center center;
   }
 }
 .inp_tit {
@@ -2295,7 +2295,7 @@ label.c_point {
   height: 45px !important;
   text-indent: -9999px;
   border-radius: 10px;
-  background: #687487 url(/assets/images/template/ico_pop_search.png) no-repeat
+  background: #687487 url(~@assets/images/template/ico_pop_search.png) no-repeat
     center;
 }
 .btn_ty01 {
@@ -2376,7 +2376,7 @@ label.c_point {
     display: block;
     margin-bottom: 15px;
     height: 60px;
-    background: url(/assets/images/template/ico_error01.png) no-repeat center center;
+    background: url(~@assets/images/template/ico_error01.png) no-repeat center center;
   }
 }
 .pop_error_txt02 {
@@ -2390,7 +2390,7 @@ label.c_point {
     display: block;
     margin-bottom: 15px;
     height: 61px;
-    background: url(/assets/images/template/ico_error02.png) no-repeat center center;
+    background: url(~@assets/images/template/ico_error02.png) no-repeat center center;
   }
 }
 .dropdown-menu {
@@ -2430,7 +2430,7 @@ label.c_point {
     right: 35px;
     width: 40px;
     height: 20px;
-    background: url(/assets/images/template/drop_arr.png) no-repeat center center;
+    background: url(~@assets/images/template/drop_arr.png) no-repeat center center;
   }
 }
 li.open {

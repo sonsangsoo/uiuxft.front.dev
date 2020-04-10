@@ -88,7 +88,7 @@ export default {
           <ul>
             <li class="login_photo"
               ><img
-                src="/assets/images/template/default_img.png"
+                src="@assets/images/template/default_img.png"
                 alt="login photo"
             /></li>
             <li class="login_name">홍*동</li>

@@ -22,7 +22,7 @@ header[data-color='mint'] {
 		.hd_btn {
 			>li {
 				>a.general_btn {
-					background: url(/assets/images/template/header/ico_general.png) no-repeat center center;
+					background: url("~@assets/images/template/header/ico_general.png") no-repeat center center;
 				}
 			}
 			>li.theme_sec.open {
@@ -44,7 +44,7 @@ header[data-color='red'] {
 		.hd_btn {
 			>li {
 				>a.general_btn {
-					background: url(/assets/images/template/header/ico_general_red.png) no-repeat center center;
+					background: url("~@assets/images/template/header/ico_general_red.png") no-repeat center center;
 				}
 			}
 			>li.theme_sec.open {
@@ -66,7 +66,7 @@ header[data-color='blue'] {
 		.hd_btn {
 			>li {
 				>a.general_btn {
-					background: url(/assets/images/template/header/ico_general_blue.png) no-repeat center center;
+					background: url("~@assets/images/template/header/ico_general_blue.png") no-repeat center center;
 				}
 			}
 			>li.theme_sec.open {
@@ -88,7 +88,7 @@ header[data-color='gray'] {
 		.hd_btn {
 			>li {
 				>a.general_btn {
-					background: url(/assets/images/template/header/ico_general_gray.png) no-repeat center center;
+					background: url("~@assets/images/template/header/ico_general_gray.png") no-repeat center center;
 				}
 			}
 			>li.theme_sec.open {

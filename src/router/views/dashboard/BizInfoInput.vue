@@ -3,12 +3,18 @@
 import PostSearch from '@components/common/PostSearch.vue' //우편번호 조회(kt) 공통 컴포넌트 */
 
 export default {
-  props: ['egov'],
+  props: {
+    egov: {
+      type: String,
+      default: '',
+    },
+  },
   data() {
     return {}
   },
   methods: {},
 }
+/* eslint-disable */
 </script>
 
 <!-- 고객등록 개인/외국인 고객 정보 등록 폼 -->
@@ -28,7 +34,7 @@ export default {
         <label for="" class="label_ty"
           >사업자번호<span class="c_point">*</span></label
         >
-        <input type="text"  id="bizNo" class="input_ty" />
+        <input id="bizNo" type="text" class="input_ty" />
       </div>
       <div v-if="egov === true"> </div>
 
@@ -62,7 +68,7 @@ export default {
         <label for="" class="label_ty"
           >종목<span class="c_point">*</span></label
         >
-        <select name="" id="" class="sel_ty w100 sel_cust_ty" title="">
+        <select name=""   class="sel_ty w100 sel_cust_ty" title="">
           <option value="">선택</option>
           <option value="">국가기관</option>
           <option value="">군부대</option>
@@ -103,9 +109,9 @@ export default {
       <div class="half_wrap ty02">
         <div><input type="text" class="input_ty"/></div>
         <div class="checks">
-          <input type="radio" id="" name="" checked />
+          <input type="radio"   name="" checked />
           <label for="" class="pl20">수신</label>
-          <input type="radio" id="" name="" />
+          <input type="radio"   name="" />
           <label for="" class="pl20">거부</label>
         </div>
       </div>
@@ -117,9 +123,9 @@ export default {
       <div class="half_wrap ty02">
         <div><input type="text" class="input_ty"/></div>
         <div class="checks">
-          <input type="radio" id="" name="" checked />
+          <input type="radio"   name="" checked />
           <label for="" class="pl20">수신</label>
-          <input type="radio" id="" name="" />
+          <input type="radio"   name="" />
           <label for="" class="pl20">거부</label>
         </div>
       </div>
@@ -137,7 +143,7 @@ export default {
       </div>
       <div class="half_wrap mt5 ty04">
         <div>
-          <select name="" id="" class="sel_ty w100" title="이메일 주소 선택">
+          <select name=""   class="sel_ty w100" title="이메일 주소 선택">
             <option value="">직접입력</option>
             <option value="">naver.com</option>
             <option value="">gmail.com</option>
@@ -145,9 +151,9 @@ export default {
         </div>
         <div>
           <div class="checks">
-            <input type="radio" id="" name="" checked />
+            <input type="radio"   name="" checked />
             <label for="" class="pl20">수신</label>
-            <input type="radio" id="" name="" />
+            <input type="radio"   name="" />
             <label for="" class="pl20">거부</label>
           </div>
         </div>
@@ -164,7 +170,7 @@ export default {
         <label for="" class="label_ty"
           >감면구분<span class="c_point">*</span></label
         >
-        <select name="" id="" class="sel_ty w100 medium" title="감면구분 선택">
+        <select name=""   class="sel_ty w100 medium" title="감면구분 선택">
           <option value="">심신장애인</option>
           <option value="">국가유공상이자</option>
           <option value="">애국지사</option>

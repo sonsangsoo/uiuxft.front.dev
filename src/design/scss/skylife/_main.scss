@@ -159,7 +159,7 @@ span.sub_tit {
       top: 0;
       width: 14px;
       height: 100%;
-      background: url(/assets/images/template/arcod_arr_ov.png) no-repeat center
+      background: url("~@assets/images/template/arcod_arr_ov.png") no-repeat center
         center;
       transition: all 0.3s;
     }
@@ -182,7 +182,7 @@ span.sub_tit {
   }
   dt.close {
     &:after {
-      background: url(/assets/images/template/arcod_arr.png) no-repeat center center;
+      background: url("~@assets/images/template/arcod_arr.png") no-repeat center center;
       transform: rotate(180deg);
     }
   }
