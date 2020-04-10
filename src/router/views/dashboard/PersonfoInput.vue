@@ -52,9 +52,9 @@ export default {
       <div class="half_wrap ty02">
         <div><input type="text" class="input_ty"/></div>
         <div class="checks">
-          <input type="radio" id="" name="" checked />
+          <input type="radio"   name="" checked />
           <label for="" class="pl20">수신</label>
-          <input type="radio" id="" name="" />
+          <input type="radio"   name="" />
           <label for="" class="pl20">거부</label>
         </div>
       </div>
@@ -66,9 +66,9 @@ export default {
       <div class="half_wrap ty02">
         <div><input type="text" class="input_ty"/></div>
         <div class="checks">
-          <input type="radio" id="" name="" checked />
+          <input type="radio"   name="" checked />
           <label for="" class="pl20">수신</label>
-          <input type="radio" id="" name="" />
+          <input type="radio"   name="" />
           <label for="" class="pl20">거부</label>
         </div>
       </div>
@@ -86,7 +86,7 @@ export default {
       </div>
       <div class="half_wrap mt5 ty04">
         <div>
-          <select name="" id="" class="sel_ty w100" title="이메일 주소 선택">
+          <select name=""   class="sel_ty w100" title="이메일 주소 선택">
             <option value="">직접입력</option>
             <option value="">naver.com</option>
             <option value="">gmail.com</option>
@@ -94,9 +94,9 @@ export default {
         </div>
         <div>
           <div class="checks">
-            <input type="radio" id="" name="" checked />
+            <input type="radio"   name="" checked />
             <label for="" class="pl20">수신</label>
-            <input type="radio" id="" name="" />
+            <input type="radio"   name="" />
             <label for="" class="pl20">거부</label>
           </div>
         </div>
@@ -107,7 +107,7 @@ export default {
         <label for="" class="label_ty"
           >감면구분<span class="c_point">*</span></label
         >
-        <select name="" id="" class="sel_ty w100 medium" title="감면구분 선택">
+        <select name=""   class="sel_ty w100 medium" title="감면구분 선택">
           <option value="">심신장애인</option>
           <option value="">국가유공상이자</option>
           <option value="">애국지사</option>

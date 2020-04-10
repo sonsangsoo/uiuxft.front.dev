@@ -28,7 +28,7 @@ export default {
         <label for="" class="label_ty"
           >사업자번호<span class="c_point">*</span></label
         >
-        <input type="text" class="input_ty" id="bizNo" />
+        <input type="text"  id="bizNo" class="input_ty" />
       </div>
       <div v-if="egov === true"> </div>
 
