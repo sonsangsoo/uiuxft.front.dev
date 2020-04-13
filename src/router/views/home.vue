@@ -4,6 +4,7 @@ import appConfig from '@src/app.config'
 import Header from '@components/Header.vue'
 import Aside from '@components/Aside.vue'
 import Section from '@components/section.vue'
+import { getUser } from '../../services'
 
 export default {
   page: {
@@ -11,6 +12,20 @@ export default {
     meta: [{ name: 'description', content: appConfig.description }],
   },
   components: { Header, Aside, Section },
+  data() {
+    return {
+      custNm: '하늘이',
+      juminBizNo: '1111112222222',
+    }
+  },
+  created() {
+    getUser({ custNm: this.custNm, juminBizNo: this.juminBizNo }).then(
+      (res) => {
+        console.log('nameVerifyCheck')
+      }
+    )
+  },
+  methods: {},
 }
 </script>
 
