@@ -33,7 +33,6 @@ export default {
     },
   },
   mounted() {
-    console.log(this.$refs)
     this.selectedTab = this.tabs[0]
   },
   methods: {

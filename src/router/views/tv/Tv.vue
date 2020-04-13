@@ -23,11 +23,16 @@ export default {
   },
   data() {
     return {
-      Name : 'tv'
+      Name: 'tv',
+      custNm: '하늘이',
+      juminBizNo: '1111112222222',
     }
   },
-  mounted() {},
-  methods: {},
+  mounted() {
+  },
+  methods: {
+
+  },
 }
 </script>
 
