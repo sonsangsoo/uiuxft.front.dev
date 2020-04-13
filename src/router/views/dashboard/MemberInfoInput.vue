@@ -8,8 +8,6 @@ export default {
       default: '',
     },
   },
-  data() {},
-  methods: {},
 }
 </script>
 

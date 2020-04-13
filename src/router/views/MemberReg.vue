@@ -26,7 +26,6 @@ export default {
       personType: '1',
     }
   },
-  computed: {},
   mounted() {
     console.log(this.$refs)
     this.selectedTab = this.tabs[0]

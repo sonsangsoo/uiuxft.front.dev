@@ -10,8 +10,6 @@ export default {
       default: '',
     },
   },
-  data() {},
-  methods: {},
 }
 /* eslint-disable */
 </script>
@@ -38,7 +36,15 @@ export default {
         </div>
 
         <!-- 기업일 경우 -->
-        <div class="busi_sec">
+        <div
+          class="busi_sec"
+          v-if="
+            personType === '3' ||
+              personType === '4' ||
+              personType === '5' ||
+              personType === '6'
+          "
+        >
           <div class="content_sec half_wrap mt15">
             <div>
               <label for="" class="label_ty">대표자명</label>
@@ -94,12 +100,28 @@ export default {
           </div>
         </div>
         <!-- 기업일 경우 -->
-        <div class="content_sec busi_sec">
+        <div
+          class="content_sec busi_sec"
+          v-if="
+            personType === '3' ||
+              personType === '4' ||
+              personType === '5' ||
+              personType === '6'
+          "
+        >
           <label for="" class="label_ty">청구처 FAX번호</label>
           <input type="text" class="input_ty pr40" />
         </div>
         <!-- //기업일 경우 -->
-        <div class="content_sec">
+        <div
+          class="content_sec"
+          v-if="
+            personType === '3' ||
+              personType === '4' ||
+              personType === '5' ||
+              personType === '6'
+          "
+        >
           <label for="" class="label_ty"
             >우편번호<span class="c_point">*</span></label
           >
