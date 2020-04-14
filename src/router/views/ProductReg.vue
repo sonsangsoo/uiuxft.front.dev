@@ -5,7 +5,12 @@ import InternetSection from '@views/internet/Internet.vue'
 import homeRentalSection from '@views/homeRental/homeRental.vue'
 
 export default {
-  components: { TvSection, InternetSection, homeRentalSection, AppBasicInfo },
+  components: {
+    TvSection,
+    InternetSection,
+    homeRentalSection,
+    AppBasicInfo,
+  },
   data() {
     return {
       isTabAtive: true,
@@ -19,6 +24,11 @@ export default {
   methods: {
     openTab(tab) {
       this.selectedTab = tab
+      /*  if (tab === 'TV') {
+        this.$router.push({ name: 'tv' })
+      } else if (tab === '인터넷') {
+        this.$router.push({ name: 'internet' })
+      } */
     },
   },
 }
@@ -33,14 +43,13 @@ export default {
           :class="{ active: tab === selectedTab }"
           href="#"
           @click="openTab(tab)"
-          >{{ tab }}</a
+          ><router-link to="/tv">{{ tab }}</router-link></a
         >
       </li>
     </ul>
     <!-- 컨텐츠 -->
     <div class="box_cnts">
       <ul class="tab_cnt_list">
-        <!-- 현황 -->
         <li v-if="selectedTab === tabs[0]" class="active">
           <!-- 상품목록 -->
           <div class="content_sec mb30">
@@ -294,6 +303,7 @@ export default {
             <a href="#" class="btn_ty ty03">저장</a>
           </div>
         </li>
+        <router-view></router-view>
         <li v-if="selectedTab === tabs[1]" class="active">
           <TvSection></TvSection>
         </li>
@@ -305,11 +315,12 @@ export default {
             <homeRentalSection></homeRentalSection>
           </div>
         </li>
-        <li v-if="selectedTab === tabs[4]" class="active">
+        -->
+        <!-- <li v-if="selectedTab === tabs[4]" class="active">
           <div class="content_sec mb30">
             ...
           </div>
-        </li>
+        </li> -->
       </ul>
     </div>
   </article>

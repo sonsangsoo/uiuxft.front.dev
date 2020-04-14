@@ -39,7 +39,6 @@ export default {
   <div
     v-show="popupSeen"
     id="name_search"
-    ref="popup_wrap"
     class="popup_wrap size01"
   >
     <div ref="popup" class="popup">
