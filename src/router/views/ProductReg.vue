@@ -24,11 +24,11 @@ export default {
   methods: {
     openTab(tab) {
       this.selectedTab = tab
-      /*  if (tab === 'TV') {
+      if (tab === 'TV') {
         this.$router.push({ name: 'tv' })
       } else if (tab === '인터넷') {
         this.$router.push({ name: 'internet' })
-      } */
+      }
     },
   },
 }
@@ -43,7 +43,7 @@ export default {
           :class="{ active: tab === selectedTab }"
           href="#"
           @click="openTab(tab)"
-          ><router-link to="/tv">{{ tab }}</router-link></a
+          >{{ tab }}</a
         >
       </li>
     </ul>
@@ -315,7 +315,6 @@ export default {
             <homeRentalSection></homeRentalSection>
           </div>
         </li>
-        -->
         <!-- <li v-if="selectedTab === tabs[4]" class="active">
           <div class="content_sec mb30">
             ...
