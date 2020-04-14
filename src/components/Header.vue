@@ -1,9 +1,9 @@
 <script>
 import { authComputed } from '@state/helpers'
-import { popNameInfoCheck } from '../router/views/popup/index.js'
+import { popSelectDisNetwork } from '../router/views/popup/index.js'
 
 export default {
-  components: {},
+  components: {  },
   data() {
     return {}
   },
@@ -12,7 +12,7 @@ export default {
   },
   methods: {
     testPopUp() {
-      return popNameInfoCheck().then((res) => {
+      return popSelectDisNetwork().then((res) => {
         console.log(res.testName)
         console.log(res.testContent)
         return res

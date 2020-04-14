@@ -4,7 +4,7 @@ import appConfig from '@src/app.config'
 import Header from '@components/Header.vue'
 import Aside from '@components/Aside.vue'
 import Section from '@components/section.vue'
-import { getUser } from '../../services'
+// import { getUser } from '../../services'
 
 export default {
   page: {
@@ -19,11 +19,13 @@ export default {
     }
   },
   created() {
-    getUser({ custNm: this.custNm, juminBizNo: this.juminBizNo }).then(
+    /* getUser({ custNm: this.custNm, juminBizNo: this.juminBizNo }).then(
       (res) => {
         console.log('nameVerifyCheck')
+        console.log(res.data.rsltMsg)
+        console.log(res.data.rsltCd)
       }
-    )
+    ) */
   },
   methods: {},
 }

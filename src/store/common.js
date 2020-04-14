@@ -1,5 +1,5 @@
-import * as types from './mutation-types'
 import * as api from '../services'
+import * as types from './mutation-types'
 
 const state = {
   isAuthenticated: true,
@@ -14,7 +14,7 @@ const actions = {
   getUser({ commit }, params) {
     return api.getUser(params).then((res) => {
       const data = res.data
-      let userInfo = data
+      const userInfo = data
       localStorage.setItem('userInfo', JSON.stringify(userInfo))
       return commit(types.GET_USERINFO, {
         userInfo: userInfo,

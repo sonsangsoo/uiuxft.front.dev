@@ -11,6 +11,7 @@ export default {
     }
   },
   mounted() {
+    console.log(this.$parent.searchNetwork)
     // 팝업 위치
     const left = this.$refs.popup.scrollWidth / 2
     const top = this.$refs.popup.scrollHeight / 2
