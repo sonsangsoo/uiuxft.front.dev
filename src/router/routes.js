@@ -5,25 +5,24 @@ export default [
     path: '/',
     name: 'home',
     component: () => lazyLoadView(import('@views/home.vue')),
-  } /* ,
+  },
   {
-    path: '/login',
-    name: 'login',
-    component: () => lazyLoadView(import('@views/login.vue')),
-    meta: {
-      beforeResolve(routeTo, routeFrom, next) {
-        // If the user is already logged in
-        if (store.getters['auth/loggedIn']) {
-          // Redirect to the home page instead
-          next({ name: 'home' })
-        } else {
-          // Continue to the login page
-          next()
-        }
-      },
-    },
-  }, */,
-  /* {
+    path: '/tv',
+    name: 'tv',
+    props: true,
+    component: () => import('@views/tv/Tv.vue'),
+  },
+  {
+    path: '/internet',
+    name: 'internet',
+    props: true,
+    component: () => import('@views/internet/Internet.vue'),
+  },
+  {
+    path: '/board',
+    name: 'board',
+    component: () => lazyLoadView(import('@views/internet/Internet.vue')),
+  } /* {
     path: '/profile',
     name: 'profile',
     component: () => lazyLoadView(import('@views/profile.vue')),
@@ -78,8 +77,25 @@ export default [
         next(authRequiredOnPreviousRoute ? { name: 'home' } : { ...routeFrom })
       },
     },
-  }, */
+  }, */,
+  /* ,
   {
+    path: '/login',
+    name: 'login',
+    component: () => lazyLoadView(import('@views/login.vue')),
+    meta: {
+      beforeResolve(routeTo, routeFrom, next) {
+        // If the user is already logged in
+        if (store.getters['auth/loggedIn']) {
+          // Redirect to the home page instead
+          next({ name: 'home' })
+        } else {
+          // Continue to the login page
+          next()
+        }
+      },
+    },
+  }, */ {
     path: '/404',
     name: '404',
     component: require('@views/_404.vue').default,

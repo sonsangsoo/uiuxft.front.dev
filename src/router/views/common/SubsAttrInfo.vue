@@ -1,15 +1,27 @@
 <script>
+import { popSelectDisNetwork } from '../popup/index.js'
+
 export default {
   props: {},
   data() {
     return {
       Name: '',
+      searchNetwork: '',
     }
   },
   mounted() {
     this.Name = this.$parent.Name
   },
-  methods: {},
+  methods: {
+    popupSearchNetwork() {
+    //  console.log(this.searchNetwork)
+      return popSelectDisNetwork({searchNetwork: this.searchNetwork}).then((res) => {
+        console.log(res.testName)
+        console.log(res.testContent)
+        return res
+      })
+    },
+  },
 }
 </script>
 
@@ -29,8 +41,19 @@ export default {
           <label for="" class="label_ty"
             >유치유통망<span class="c_point">*</span></label
           >
-          <input type="text" class="input_ty pr40" />
-          <button type="submit" class="search_btn" title="검색하기"></button>
+          <input
+            v-model="searchNetwork"
+            type="text"
+            name="searchNetwork"
+            class="input_ty pr40"
+            @keyup.13="popupSearchNetwork"
+          />
+          <button
+            type="submit"
+            title="검색하기"
+            class="search_btn"
+            @click="popupSearchNetwork"
+          ></button>
         </div>
         <div>
           <label for="" class="label_ty"

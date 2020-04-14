@@ -47,7 +47,7 @@ export default {
     <aside ref="aside">
       <a href="#" class="menu_btn">메뉴</a>
       <ul>
-        <li class="lnb_li01"><a href="#" title="My Menu">My Menu</a></li>
+        <li class="lnb_li01"><router-link to="/tv">My Menu</router-link></li>
         <li class="lnb_li02">
           <a
             href="#"
