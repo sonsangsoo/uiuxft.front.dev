@@ -39,7 +39,7 @@
     "date-fns": "2.10.0",
     "http": "0.0.1-security",
     "http2": "^3.3.7",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "normalize.css": "8.0.1",
     "nprogress": "0.2.0",
     "qs": "^6.9.3",
